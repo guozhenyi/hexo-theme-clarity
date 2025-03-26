@@ -14,6 +14,9 @@ with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 specific font stacks to ensure the greatest OS/browser compatibility.
 */
 
+$originCodeBgColor: #f7f8f8; // 原来的代码块背景色
+$codeBgColor: #e1e8e9; // 新的代码块背景色
+
 html,
 button,
 input,
@@ -391,10 +394,10 @@ div {
             overflow-wrap: break-word;
 
             code {
-                display: inline-block;
-                margin: 0 5px;
-                padding: 0 5px;
-                background: #f7f8f8;
+                // display: inline-block;
+                // margin: 0 5px;
+                padding: 3px 5px;
+                background-color: $codeBgColor;
                 font-family: Menlo, Consolas, monospace !important;
             }
 
@@ -453,10 +456,10 @@ div {
             }
 
             code {
-                display: inline-block;
-                margin: 0 5px;
-                padding: 0px 5px;
-                background: #f7f8f8;
+                // display: inline-block;
+                // margin: 0 5px;
+                padding: 3px 5px;
+                background: $codeBgColor;
                 font-family: Menlo, Consolas, monospace !important;
             }
 
@@ -1119,12 +1122,13 @@ screen and (min-width: 48em) {
 
 figure.highlight,
 .codeblock {
-    background: #f7f8f8;
     margin: 10px 0;
     line-height: 1.1em;
     color: #333;
     padding-top: 15px;
     overflow: hidden;
+    background-color: $codeBgColor;
+    border-radius: 1em;
 
     table {
         display: block;
@@ -1174,8 +1178,8 @@ figure.highlight,
 
     // Gutter which contains line numbers
     .gutter {
-        background: #f7f8f8;
-        border-right: 1px solid #e6e6e6;
+        background-color: $codeBgColor;
+        border-right: 1px solid #d1d2d3;
         padding: 0.3em 15px;
         user-select: none;
     }
