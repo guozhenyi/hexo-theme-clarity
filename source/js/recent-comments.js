@@ -1,4 +1,4 @@
-!function () {
+$(document).ready(function() {
   let serverURL = document.getElementById("recent-comment").getAttribute("serverURL")
   let count = document.getElementById("recent-comment").getAttribute("count")
   if (!count) {
@@ -39,16 +39,16 @@
       let comments = '<ul>'
       response.forEach(( comment, index ) => {
         comments += '<li>' + (index + 1) + '、 ' + format(comment.insertedAt)
-        if (comment.pid) {
-          let {href, author, str} = dealComment(comment.comment)
-          comments += '<div class="waline-comment-content"><a style="display: block" href=' + window.location.origin + comment.url + href + '>'+ str + '</a></div>'
-        } else {
+        // if (comment.pid) {
+        //   let {href, author, str} = dealComment(comment.comment)
+        //   comments += '<div class="waline-comment-content"><a style="display: block" href=' + window.location.origin + comment.url + href + '>'+ str + '</a></div>'
+        // } else {
           comments += '<div class="waline-comment-content"><a style="display: block" href=' + window.location.origin + comment.url + '#' + comment.objectId + '>' + comment.comment + '</a></div>'
-        }
+        // }
         comments += '<div class="waline-comment-content-author">' + '--' + comment.nick + '</div></li>'
       })
       comments += '</ul>'
       $('#widget-waline-list').append(comments)
     },
   })
-}()
+});
