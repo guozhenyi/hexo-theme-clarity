@@ -22,6 +22,7 @@ html(lang=config.language)
         h1.hidden= current_title
         a#logo(href=url_for('.'))= config.title
         p.description= config.subtitle
+        div#docsearch
       #nav-menu
         - for (var i in theme.menu)
           +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
@@ -42,5 +43,5 @@ html(lang=config.language)
 
     if theme.totop == true
       include _partial/totop.pug
-    
+
     include _partial/after_footer.pug

@@ -47,3 +47,14 @@ if page.mathjax2
 
 script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
 script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
+
+script(src='https://unpkg.com/@docsearch/js@3.9.0/dist/umd/index.js')
+script.
+  docsearch({
+    appId: "MWG43D7VW4",
+    apiKey: "c2ffcbf97637b8417ab2539c80e6d454",
+    indexName: "guozhenyi",
+    insights: true,
+    container: "#docsearch",
+    debug: false
+  });
