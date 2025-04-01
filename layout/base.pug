@@ -17,13 +17,13 @@ doctype html
 html(lang=config.language)
   include _partial/head.pug
   body: .body_container
-    #header
+    header#header
       .site-name
         h1.hidden= current_title
         a#logo(href=url_for('.'))= config.title
         p.description= config.subtitle
         div#docsearch
-      #nav-menu
+      nav#nav-menu
         - for (var i in theme.menu)
           +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
 
@@ -31,11 +31,11 @@ html(lang=config.language)
       .pure-u-1.pure-u-md-3-4: .content_container
         block content
       if theme.widgets_on_small_screens
-        .pure-u-1.pure-u-md-1-4: #sidebar
+        .pure-u-1.pure-u-md-1-4: aside#sidebar
           each item in theme.widgets
             != partial('_widget/' + item + '.pug', null, {cache: !config.relative_link})
       else
-        .pure-u-1-4.hidden_mid_and_down: #sidebar
+        .pure-u-1-4.hidden_mid_and_down: aside#sidebar
           each item in theme.widgets
             != partial('_widget/' + item + '.pug', null, {cache: !config.relative_link})
       .pure-u-1.pure-u-md-3-4
