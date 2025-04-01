@@ -10,6 +10,7 @@ head
     meta(name='last-modified', content=page.updated.format('YYYY-MM-DDTHH:mm:ssZ'))
     //- Open Graph 协议
     != open_graph()
+    link(rel='canonical', href=page.permalink)
   block title
   link(rel='icon', mask='',sizes='any', href=url_for('favicon.ico'))
   link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
