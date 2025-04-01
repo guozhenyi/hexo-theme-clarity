@@ -15,7 +15,9 @@ block content
         include _partial/helpers.pug
         a(href=url_for(post.path))
           +title(post)
-      .post-meta= post.date.format(config.date_format)
+      .post-meta
+        span.post-meta-label= '发表于'
+        time.post-meta-published= post.date.format(config.date_format)
       if theme.disqus.enable == true
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
       if theme.changyan

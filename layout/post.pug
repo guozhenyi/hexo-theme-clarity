@@ -6,7 +6,9 @@ block title
 block content
   .post
     h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
+    .post-meta
+      span.post-meta-label= '发表于'
+      time.post-meta-published= page.date.format(config.date_format)
       if page.categories.length > 0
         span= ' | '
         span.category
