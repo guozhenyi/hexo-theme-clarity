@@ -11,8 +11,11 @@ with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 specific font stacks to ensure the greatest OS/browser compatibility.
 */
 
-$originCodeBgColor: #f7f8f8; // 原来的代码块背景色
+$primaryColor: #007bff;
 $codeBgColor: #e1e8e9; // 新的代码块背景色
+
+$originCodeBgColor: #f7f8f8; // 原来的代码块背景色
+$originLinkColor: #01579f; // 原来的链接颜色
 
 html,
 button,
@@ -437,7 +440,7 @@ div {
             }
 
             a {
-                color: #01579f;
+                color: $primaryColor;
                 padding-bottom: 2px;
                 word-break: normal;
 
@@ -499,7 +502,7 @@ div {
             }
 
             a {
-                color: #01579f;
+                color: $primaryColor;
                 padding-bottom: 2px;
                 word-break: normal;
 
@@ -1202,12 +1205,12 @@ figure.highlight,
         font-size: 13px;
         padding: 0 15px 20px;
         margin: 0;
-        background: #f7f8f8;
+        background: $codeBgColor;
         color: #999999;
 
         a {
             float: right;
-            color: #01579f;
+            color: $primaryColor;
         }
     }
 
@@ -2038,7 +2041,7 @@ table {
 
     tr {
         &:nth-child(2n) {
-            background: #f7f8f8;
+            background: $codeBgColor;
         }
     }
 }
@@ -2198,7 +2201,7 @@ p.search-result {
 em.search-keyword {
     font-weight: bold;
     font-style: normal;
-    color: #01579f;
+    color: $primaryColor;
 }
 
 
