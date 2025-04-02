@@ -254,8 +254,36 @@ div {
                 }
             }
 
+            .info-description {
+                line-height: 2em;
+            }
+        }
+
+        .site-info {
+            display: table;
+            margin-top: 1em;
+            width: 100%;
+
+            &__item {
+                display: table-cell;
+                line-height: 2em;
+                width: 33.3333%;
+                text-align: center;
+
+                .item__value {
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        .social-info {
+            margin-top: 1em;
+            display: flex;
+            justify-content: space-around;
+
             a.info-icon {
-                font-size: 25px;
+                font-size: 24px;
+                margin-inline: 10px;
             }
         }
     }

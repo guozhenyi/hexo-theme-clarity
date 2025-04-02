@@ -2,7 +2,20 @@
   .author-info
     a.info-avatar(href='/about/', title= __('about'))
       img.nofancybox(src=theme.info.avatar)
-    p #{theme.info.discription}
-    - for (var i in theme.info.outlinkitem)
-      a.info-icon(href=theme.info.outlinkitem[i].outlink, title=theme.info.outlinkitem[i].message, target='_blank', style='margin-inline:5px')  
-        i.fa(class='fa-' + theme.info.outlinkitem[i].name + '-square', style='margin-inline:5px')
+    .info-description #{theme.info.discription}
+  .site-info
+    .site-info__item
+      a(href='/archives/')
+        div.item__label 文章
+        div.item__value= site.posts.length
+    .site-info__item
+      div.item__label 标签
+      div.item__value= site.tags.length
+    .site-info__item
+      div.item__label 分类
+      div.item__value= site.categories.length
+  .social-info
+    - for (var item of theme.info.outlinkitem)
+      - var styled= item.color ? {color: item.color} : undefined
+      a.info-icon(href=item.outlink, title=item.message, target='_blank', style=styled)
+        i.fa(class='fa-' + item.name)
