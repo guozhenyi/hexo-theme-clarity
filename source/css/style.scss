@@ -288,6 +288,14 @@ div {
                 font-size: 24px;
                 margin-inline: 10px;
             }
+
+            i {
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
+            }
         }
     }
 }
