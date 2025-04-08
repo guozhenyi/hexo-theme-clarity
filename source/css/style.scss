@@ -11,7 +11,7 @@ with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 specific font stacks to ensure the greatest OS/browser compatibility.
 */
 
-$primaryColor: #007bff;
+$primaryColor: #409eff;
 $codeBgColor: #e1e8e9; // 新的代码块背景色
 
 $originCodeBgColor: #f7f8f8; // 原来的代码块背景色
@@ -51,7 +51,7 @@ body {
 
 a,
 button.submit {
-    color: #6E7173;
+    color: #404244;
     text-decoration: none;
     -webkit-transition: all .1s ease-in;
     -moz-transition: all .1s ease-in;
@@ -61,7 +61,8 @@ button.submit {
 
 a:hover,
 a:active {
-    color: #444;
+    color: $primaryColor;
+    text-decoration: underline;
 }
 
 a:focus {
