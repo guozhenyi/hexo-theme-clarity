@@ -4,7 +4,9 @@
 
 [预览](https://www.guozhenyi.com)｜[English Document](./README-en.md)
 
-一款极简 Hexo 主题，在各类设备上都有良好的适应性，从 [Cho](https://github.com/pagecho/maupassant/) 开发的 Typecho 主题移植而来。并在 [icylogic](https://github.com/icylogic/maupassant-hexo/) 移植的初版的基础上做了大量功能增补。
+一款还在持续演进的简洁、明快的 Hexo 主题。由 [maupassant](https://github.com/tufu9441/maupassant-hexo) Fork 而来。
+
+我在原主题 maupassant 上做了一些改进，本想合并到 maupassant，又担心我的这些改动太激进了而被作者拒绝，就干脆 Fork 过来做演进了。
 
 ## 安装
 

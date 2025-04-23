@@ -4,13 +4,15 @@
 
 [Preview](https://www.guozhenyi.com)
 
-A simple Hexo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [icylogic](https://github.com/icylogic/maupassant-hexo/).
+A clean Hexo theme template with great performance on different devices. 
+
+forked and modified from [maupassant](https://github.com/tufu9441/maupassant-hexo).
 
 ## Installation
 Install theme and renderers:
 
 ```shell
-$ git clone https://github.com/tufu9441/hexo-theme-clarity.git themes/clarity
+$ git clone https://github.com/guozhenyi/hexo-theme-clarity.git themes/clarity
 $ npm install hexo-renderer-pug --save
 $ npm install hexo-renderer-sass-next --save
 ```
