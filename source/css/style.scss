@@ -29,12 +29,17 @@ textarea,
 }
 
 body {
-    background-color: #f2f3f5;
     color: #444;
+    font-size: 14px;
     font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 14px;
+    background-color: #f2f3f5;
+    background-image: linear-gradient(to bottom, #7FB8B7, #FFD455);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .body_container {
