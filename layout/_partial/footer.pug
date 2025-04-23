@@ -2,16 +2,16 @@ footer#footer
   span(style={'margin-right': '10px'})= '© ' + date(Date.now(), 'YYYY') + ' '
     a(href=url_for('.'), rel='nofollow')= config.title
 
-  if theme.icp && theme.gab
+  if theme.icp && theme.bei
     <br>
 
   if theme.icp
     a(rel='nofollow', target='_blank', href='https://beian.miit.gov.cn/')=  theme.icp
 
-  if theme.gab
+  if theme.bei
     span(style='margin-left: 20px;')
-      img(src='/img/gab.png', style='width: 16px; vertical-align: text-bottom; object-fit: contain;')
-      a(rel='noreferrer', target='_blank', href='https://beian.mps.gov.cn/')= theme.gab
+      img(src='/img/bei.png', style='width: 16px; vertical-align: text-bottom; object-fit: contain;')
+      a(rel='noreferrer', target='_blank', href='https://beian.mps.gov.cn/')= theme.bei
 
   <br>
 

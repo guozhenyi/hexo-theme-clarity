@@ -123,8 +123,8 @@ dark: false ## If you want to toggle between light/dark themes, set the value to
 totop: true ## If you want to use the rocketship button to return to the top, set the value to true.
 external_css: false ## If you want to load an external CSS file, set the value to true and create a file named "external.css" in the source/css folder.
 post_content_length: 180 ## Set the length of the post summary displayed on home page when no description written.
-icp: ## China mainland only, show icp info on the bottom.
-gab: ## China mainland only, show gab info on the bottom.
+icp: ## 显示 icp 信息
+bei: ## 显示公安部备案信息
 
 menu: # 菜单项，记得要在 source 创建 directory 中填写的目录（archives不用自己创建，about需要自己创建）
   - page: home
