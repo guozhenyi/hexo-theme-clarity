@@ -1,26 +1,24 @@
 # Clarity
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/guozhenyi/hexo-theme-clarity/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/guozhenyi/hexo-theme-clarity/blob/master/LICENSE)
 
-[预览](https://www.guozhenyi.com)｜[English Document](./README-en.md)
+[Preview](https://www.guozhenyi.com)
 
-一款极简 Hexo 主题，在各类设备上都有良好的适应性，从 [Cho](https://github.com/pagecho/maupassant/) 开发的 Typecho 主题移植而来。并在 [icylogic](https://github.com/icylogic/maupassant-hexo/) 移植的初版的基础上做了大量功能增补。
+A simple Hexo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [icylogic](https://github.com/icylogic/maupassant-hexo/).
 
-## 安装
-
-在 Hexo 创建的项目根目录中，安装主题和模板引擎：
+## Installation
+Install theme and renderers:
 
 ```shell
-$ git clone https://github.com/guozhenyi/hexo-theme-clarity.git themes/clarity
+$ git clone https://github.com/tufu9441/hexo-theme-clarity.git themes/clarity
 $ npm install hexo-renderer-pug --save
 $ npm install hexo-renderer-sass-next --save
 ```
 
-之后，在 `_config.yml` 文件中将 `theme` 的值改为 `clarity`。
+Then change your `theme` setting in `_config.yml` to `clarity`.
 
-## 配置
-
-默认配置:
+## Configuration
+Default config:
 
 ```YAML
 disqus:
@@ -89,7 +87,7 @@ self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 microsoft_clarity:  ## Your Microsoft Clarity tracking id, e.g. zg2ctuea9j
-fancybox: true ## 是否启用图片灯箱效果，默认启用。设为 false 可禁用。
+fancybox: true ## If you want to use fancybox please set the value to true.
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: false ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
@@ -126,7 +124,7 @@ post_content_length: 180 ## Set the length of the post summary displayed on home
 icp: ## China mainland only, show icp info on the bottom.
 gab: ## China mainland only, show gab info on the bottom.
 
-menu: # 菜单项，记得要在 source 创建 directory 中填写的目录（archives不用自己创建，about需要自己创建）
+menu:
   - page: home
     directory: .
     icon: fa-home
@@ -197,86 +195,68 @@ css: css
 # Theme version
 version: 1.0.0
 ```
-
-- disqus - [Disqus](https://disqus.com) 评论系统, 支持 [DisqusJS](https://github.com/SukkaW/DisqusJS) API.
+- disqus - [Disqus](https://disqus.com) comment system, integrated with [DisqusJS](https://github.com/SukkaW/DisqusJS) API.
 - uyan - [Uyan](http://www.uyan.cc) id
 - livere - [LiveRe](https://livere.com) data-uid
 - changyan - [Changyan](http://changyan.kuaizhan.com) appid
-- gitalk - [Gitalk](https://github.com/gitalk/gitalk) 评论系统
-- valine - [Valine](https://valine.js.org) 评论系统
-- minivaline - [MiniValine](https://github.com/MiniValine/MiniValine) 评论系统
-- waline - [Waline](https://waline.js.org) 评论系统
-- utterances - [Utterances](https://utteranc.es) 评论系统
-- twikoo - [Twikoo](https://twikoo.js.org) 评论系统
-- google_search - 默认使用Google搜索引擎
-- baidu_search - 若想使用百度搜索，将其设定为 `true`
+- gitalk - [Gitalk](https://github.com/gitalk/gitalk) comment system
+- valine - [Valine](https://valine.js.org) comment system
+- minivaline - [MiniValine](https://github.com/MiniValine/MiniValine) comment system
+- waline - [Waline](https://waline.js.org) comment system
+- utterances - [Utterances](https://utteranc.es) comment system
+- twikoo - [Twikoo](https://twikoo.js.org) comment system
+- google_search - Default search engine
+- baidu_search - Search engine for users in China
 - swiftype - [Swiftype Search](https://swiftype.com) key
-- self_search - 基于jQuery的 [本地搜索引擎](https://www.hahack.com/codes/local-search-engine-for-hexo/), 需要安装 [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) 插件使用
-- google_analytics - [Google Analytics](https://www.google.com/analytics/) 跟踪ID
-- baidu_analytics - [Baidu Analytics](https://tongji.baidu.com) 跟踪ID
-- microsoft_clarity - [Microsoft Clarity](https://clarity.microsoft.com/) 跟踪ID
-- fancybox - 是否启用 [Fancybox](https://fancyapps.com/fancybox/) 图片灯箱效果
-- show_category_count - 是否在侧边栏显示分类数目
+- self_search - A jQuery-based [local search engine](https://www.hahack.com/codes/local-search-engine-for-hexo/), with the dependency on the plugin [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+- google_analytics - [Google Analytics](https://www.google.com/analytics/) tracking id
+- baidu_analytics - [Baidu Analytics](https://tongji.baidu.com) tracking id
+- microsoft_clarity - [Microsoft Clarity](https://clarity.microsoft.com/) tracking id
+- fancybox - Enable [Fancybox](https://fancyapps.com/fancybox/)
+- show_category_count - Show the count of categories in the sidebar widget
 - toc_number - Show the list number of toc
-- shareto - 是否显示分享按钮, 需要安装 [hexo-helper-qrcode](https://github.com/yscoder/hexo-helper-qrcode) 插件使用
-- busuanzi - 是否使用 [不蒜子](http://ibruce.info) 页面访问统计
-- wordcount - 是否使用 [hexo-wordcount](https://github.com/willin/hexo-wordcount) 统计文章字数
-- widgets_on_small_screens - 是否在移动设备屏幕底部显示侧边栏
-- canvas_nest - 是否使用 [canvas-nest.js](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md) 动态背景
-- donate - 是否在每篇文章后面显示捐赠按钮
-- post_copyright - 是否在每篇文章后面显示版权信息
-- love - 是否在任意点击处出现桃心
-- plantuml - 是否使用 PlantUML 生成 UML 图表
-- copycode - 是否为代码快启用一键复制功能
+- shareto - Enable share button, with the dependency on the plugin [hexo-helper-qrcode](https://github.com/yscoder/hexo-helper-qrcode)
+- busuanzi - Enable [Busuanzi](http://ibruce.info) page views
+- wordcount - Enable [hexo-wordcount](https://github.com/willin/hexo-wordcount) of each post
+- widgets_on_small_screens - Show the widgets at the bottom of small screens
+- canvas_nest - Enable [canvas-nest.js](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md) dynamic background
+- donate - Enable donate button after each post
+- post_copyright - Enable copyright info after each post
+- love - Enable peach heart when clicking anywhere
+- plantuml - Enable PlantUML to generate UML diagram
+- copycode - Enable one-click copy of code blocks
 - dark - Enable to toggle between light/dark modes of the theme
-- totop - 是否使用返回顶部小火箭图标
-- external_css - 是否加载外部CSS文件
+- totop - Enable the rocketship to-top button
+- external_css - Enable loading an external CSS file
 - post_content_length - Abstract length of each post
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](https://fontawesome.com) icon fonts have been integrated, and you can choose other icons which you like [here](https://fontawesome.com/icons/) and use them according to the instruction.
 - widgets - Choose and arrange the widgets in sidebar here.
 - info - Set your personal information of the info widget here.
 - links - Edit your blogroll here, and an independent blogroll page can be displayed by setting `layout: blogroll` of a page.
-- timeline - 网站历史时间线，在页面 `front-matter` 中设置 `layout: timeline` 可显示
-- Static files - 静态文件存储路径，方便设置CDN缓存。
+- timeline - Show a timeline of the website by setting `layout: timeline` of a page.
+- Static files - Static files directory, for convenience of CDN usage.
 - Theme version - For automatic refresh of static files on CDN.
 
-## 主题特性
-#### 网站图标
+## Features
+#### Logo
+You can set a **favicon.ico** for your website, please put it into `source` folder of hexo directory, recommended size: 32px*32px.
 
-若要设置网站 Favicon，可以将 **favicon.ico** 放在 Hexo 根目录的 `source` 文件夹下，建议的大小：32px*32px。
+You can add a website logo for apple devices, please put an image named **apple-touch-icon.png** into `source` folder of hexo directory, recommended size: 114px*114px.
 
-若要为网站添加苹果设备图标，请将命名为 **apple-touch-icon.png** 的图片放在同样的位置，建议的大小：114px*114px。
+#### Abstract
+You can control the abstract of a post shown at index, by either filling a `description:` item in `front-matter` of the `post.md`, or just inserting a `<!--more-->` before your hidden content.
 
-#### 文章摘要
+#### Page
+Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`. A tagcloud page can be enabled by setting `layout: tagcloud` of a page. If you need a single column page without sidebar, just set `layout: single-column` instead of `layout: page`.
 
-首页默认显示文章摘要而非全文，可以在文章的 `front-matter` 中填写一项 `description:` 来设置你想显示的摘要，或者直接在文章内容中插入 `<!--more-->` 以隐藏后面的内容，若两者都未设置，则自动截取文章第一段作为摘要。
+#### Table of Contents
+TOC in a post can be enabled by adding a `toc: true` item in `front-matter`.
 
-#### 添加页面
+#### Comments
+Comment feature of each post and page can be enabled (default) and disabled by adding a `comments: true` or a `comments: false` in `front-matter`. This could be useful when you want comment feature for a guestbook page, but don't want comment feature for a about page.
 
-在 `source` 目录下创建相应名称的文件夹，然后在文件夹中创建 `index.md` 文件，并在 `index.md` 的 `front-matter` 中设置 `layout` 为 `layout: page` 。现已支持添加标签页面，将页面的 `layout` 设置为 `layout: tagcloud` 即可。若需要单栏页面，就将 layout 设置为 `layout: single-column`。
-
-#### 文章目录
-
-在文章的 `front-matter` 中添加 `toc: true` 即可让该篇文章显示目录。
-
-#### 文章评论
-
-文章和页面的评论功能可以通过在 `front-matter` 中设置 `comments: true` 或 `comments: false` 来进行开启或关闭（默认开启）。比如我们创建的 `about` 页面通常不想要评论功能，就可以通过在 `about/index.md` 的头部添加 `comments: false` 来禁用评论功能。
-
-```index.md
----
-title: 关于
-date: 2025-02-25 20:58:32
-comments: false
----
-
-contents of about ...
-
-```
-
-#### 语法高亮
-
-要启用代码高亮，请在Hexo目录的 `_config.yml` 中将 `highlight` 选项按照如下设置：
+#### Syntax Highlighting
+Highlighted code showcase is supported, please set the `highlight` option in `_config.yml` of hexo directory like this:
 
 ```YAML
 highlight:
@@ -286,16 +266,14 @@ highlight:
   tab_replace:
 ```
 
-#### 数学公式
-
-要启用数学公式支持，请在 Hexo 目录的 `_config.yml` 中添加：
-
+#### Math Equation
 Add
 ```YAML
 mathjax: true
 ```
+in Hexo's `_config.yml`.
 
-并在相应文章的 front-matter 中添加 `mathjax: true` ，例如：
+In the post which you would like to use math equation, add `mathjax: true` in the `front-matter`. For example:
 
 ```YAML
 title: Test Math
@@ -304,37 +282,37 @@ categories: math
 mathjax: true
 ---
 ```
+The default math delimiters are `$$...$$` and `\\[...\\]` for displayed mathematics,
+and `$...$` and `\\(...\\)` for in-line mathematics.
 
-数学公式的默认定界符是 `$$...$$` 和 `\\[...\\]`（对于块级公式），以及 `$...$` 和 `\\(...\\)`（对于行内公式）。
-
-但是，如果你的文章内容中经常出现美元符号“`$`”, 或者说你想将“`$`”用作美元符号而非行内公式的定界符，请在 Hexo 目录的 `_config.yml` 中添加：
+However, if your post contains dollar signs (`$`), and they appear often in non-mathematical parts, in other words, you want to use `$` as dollar sign not inline math delimiter, please add
 
 ```YAML
 mathjax2: true
 ```
+in Hexo's `_config.yml` instead of `mathjax: true`. Correspondingly, add `mathjax2: true` to the `front-matter` of the post in which
+you would like to use math equation.
 
-而不是 `mathjax: true`。 相应地，在需要使用数学公式的文章的 front-matter 中也添加 `mathjax2: true`。
+#### Languages
+Seven languages are available for this theme currently: Simplified Chinese (zh-CN), Traditional Chinese (zh-TW), English (en), French (fr-FR), German (de-DE), Korean (ko) and Spanish (es-ES). Contributions of translating to other languages will be highly appreciated.
 
-#### 支持语言
+## Solutions
+- Check whether your Terminal's current directory is in hexo's root directory which contains `source/`, `themes/`, etc.
 
-目前支持简体中文（zh-CN），繁体中文（zh-TW），英语（en），法语（fr-FR），德语（de-DE），韩语（ko）和西班牙语（es-ES），欢迎翻译至其它语言。
+- If you have any trouble in using this theme, please feel free to open an [issue](https://github.com/guozhenyi/hexo-theme-clarity/issues).
 
-## 问题解决
-
-- 检查一下终端当前的目录是否为 Hexo 的根目录，并包含 `source/` 和 `themes/`。
-- 使用过程中遇到问题欢迎提交 [issue](https://github.com/guozhenyi/hexo-theme-clarity/issues).
-
-## 浏览器支持
-
+## Browsers Support
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Opera |
 | --------- | --------- | --------- | --------- | --------- |
 | IE9+, Edge| last 10 versions| last 10 versions| last 7 versions| last 10 versions
 
-## 贡献代码
+## Contributing
+All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
 
-接受贡献： [pull request](https://github.com/guozhenyi/hexo-theme-clarity/pulls).
+Looking forward to your [pull request](https://github.com/guozhenyi/hexo-theme-clarity/pulls).
 
-## 贡献者
+## Contributors
+Thanks for all contributors of this repo.
 
 <a href="https://github.com/guozhenyi/hexo-theme-clarity/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=guozhenyi/hexo-theme-clarity" />
