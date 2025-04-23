@@ -1943,7 +1943,7 @@ figure.highlight,
     border-top: 1px solid #eee;
 
     a {
-        display: inline-block;
+        // display: inline-block;
         line-height: 25px;
         font-size: 15px;
         color: #555;
@@ -2101,7 +2101,7 @@ table {
 }
 
 .article-share-links {
-    clearfix: none;
+    // clearfix: none;
     background: #eee;
 }
 
@@ -2487,7 +2487,7 @@ html[data-dark='true'] {
         display: -webkit-box;
         overflow: hidden;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        line-clamp: 3;
         /*这里设置第几行显示省略号，可以设置第一行或者其他行*/
     }
 }
