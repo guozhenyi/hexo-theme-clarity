@@ -14,8 +14,9 @@
     .site-info__item
       div.item__label 分类
       div.item__value= site.categories.length
-  .social-info
-    - for (var item of theme.info.outlinkitem)
-      - var styled= item.color ? {color: item.color} : undefined
-      a.info-icon(href=item.outlink, title=item.message, target='_blank', style=styled)
-        i.fa(class='fa-' + item.name)
+  if theme.info.outlinkitem
+    .social-info
+      - for (var item of theme.info.outlinkitem)
+        - var styled= item.color ? {color: item.color} : undefined
+        a.info-icon(href=item.outlink, title=item.message, target='_blank', style=styled)
+          i.fa(class='fa-' + item.name)
