@@ -2,6 +2,7 @@
   "name": "hexo-theme-clarity",
   "version": "1.0.0",
   "description": "Hexo Theme Clarity",
+  "repository": "guozhenyi/hexo-theme-clarity",
   "keywords": [
     "hexo",
     "theme",
