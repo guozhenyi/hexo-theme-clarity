@@ -133,20 +133,17 @@ info:
   avatar: /img/avatar.png
   discription: To be a better man.
   outlinkitem:
-    - name: twitter
-      outlink: https://twitter.com/username
-      message: Twitter
-    - name: github
+    - name: github # fa-{name}
       outlink: https://github.com/username
       message: Github
     - name: envelope
       outlink: mailto:admin@domain.com
       message: Email
-      color: '#007bff'
+      # color: '#007bff'
     - name: rss
       outlink: /atom.xml
       message: RSS
-      color: '#ff5722'
+      # color: '#ff5722'
 
 links:
   - title: site-name1
