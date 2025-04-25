@@ -1,4 +1,5 @@
 .widget
   .widget-title
     i.fa.fa-file-o= ' ' + __('recent')
-  != list_posts({amount: 10})
+  if theme.recent_post_num > 0
+    != list_posts({amount: theme.recent_post_num})

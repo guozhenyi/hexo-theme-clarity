@@ -46,7 +46,6 @@ waline: ## See: https://waline.js.org/
   pageSize: 30 ## The desired number of comments shown in each page.
   wordLimit: 500 ## Limit the number of words in comments, 0 means no limit.
   requiredMeta: ['nick','mail'] ## Required user information, e.g. ['nick','mail','link']
-  count: 5 ## The number comments displayed in the recent_comments widget, default is 10.
   locale: {
     placeholder: '欢迎评论',
     sofa: '来发评论吧~'
@@ -109,6 +108,8 @@ totop: true ## If you want to use the rocketship button to return to the top, se
 external_css: false ## If you want to load an external CSS file, set the value to true and create a file named "external.css" in the source/css folder.
 post_content_length: 180 ## Set the length of the post summary displayed on home page when no description written.
 show_forever: false ## Whether to display foreverblog link in footer.
+recent_post_num: 5 ## Recent post number
+recent_comment_num: 5 ## Recent comment number
 icp: ## China mainland only, show icp info on the bottom.
 bei: ## China mainland only, show bei info on the bottom.
 
