@@ -2,6 +2,10 @@ footer#footer
   span(style={'margin-right': '10px'})= '© ' + date(Date.now(), 'YYYY') + ' '
     a(href=url_for('.'), rel='nofollow')= config.title
 
+  if theme.show_forever
+    span(style={'margin-right': '10px'})
+      a(target='_blank', href='https://www.foreverblog.cn') 《十年之约》
+
   if theme.icp && theme.bei
     <br>
 
