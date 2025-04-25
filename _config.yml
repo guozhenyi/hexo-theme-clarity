@@ -113,6 +113,14 @@ recent_comment_num: 5 ## Recent comment number
 icp: ## China mainland only, show icp info on the bottom.
 bei: ## China mainland only, show bei info on the bottom.
 
+# The CDN provider for third-party scripts
+cdn_type: unpkg ## Options: jsdelivr/fastly/unpkg/custom
+cdn_custom_url: ## When cdn_type is 'custom', this is a required field. e.g. https://cdn1.yourdomain.com
+cdn_providers: ## List of public CDN providers
+  unpkg: https://unpkg.com
+  jsdelivr: https://cdn.jsdelivr.net/npm
+  fastly: https://fastly.jsdelivr.net/npm
+
 menu:
   - page: home
     directory: .

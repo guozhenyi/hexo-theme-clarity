@@ -1,3 +1,10 @@
+- var providers = theme.cdn_providers
+- var cdn_url = ''
+if theme.cdn_type == 'custom'
+  - cdn_url = theme.cdn_custom_url
+else if theme.cdn_type in providers
+  - cdn_url = providers[theme.cdn_type]
+
 head
   meta(charset='utf-8')
   meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -16,14 +23,14 @@ head
   link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
   link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
   link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
-  link(rel="preload", href="https://unpkg.com/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href= cdn_url + "/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0", as="font", type="font/woff2", crossorigin="anonymous")
   link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
-  //- link(rel='stylesheet', type='text/css', href='https://unpkg.com/normalize.css@8.0.1/normalize.css')
-  link(rel='stylesheet', type='text/css', href='https://unpkg.com/purecss@3.0.0/build/pure-min.css')
-  link(rel='stylesheet', type='text/css', href='https://unpkg.com/purecss@3.0.0/build/grids-responsive-min.css')
-  link(rel='stylesheet', href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css')
-  link(rel='stylesheet', href='https://unpkg.com/@docsearch/css@3.9.0/dist/style.css')
-  script(type='text/javascript', src='https://unpkg.com/jquery@3.7.1/dist/jquery.min.js')
+  //- link(rel='stylesheet', type='text/css', href= cdn_url + '/normalize.css@8.0.1/normalize.css')
+  link(rel='stylesheet', type='text/css', href= cdn_url + '/purecss@3.0.0/build/pure-min.css')
+  link(rel='stylesheet', type='text/css', href= cdn_url + '/purecss@3.0.0/build/grids-responsive-min.css')
+  link(rel='stylesheet', href= cdn_url + '/font-awesome@4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href= cdn_url + '/@docsearch/css@3.9.0/dist/style.css')
+  script(type='text/javascript', src= cdn_url + '/jquery@3.7.1/dist/jquery.min.js')
   if config.feed
     link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
   if theme.google_analytics
@@ -52,9 +59,9 @@ head
       })(window, document, "clarity", "script", "#{theme.microsoft_clarity}");
 
   if !(theme.copycode == false && (theme.donate.enable == false && page.donate != true) && theme.post_copyright.enable == false)
-    script(type='text/javascript', src='https://unpkg.com/clipboard@2.0.11/dist/clipboard.min.js')
-    script(type='text/javascript', src='https://unpkg.com/toastr@2.1.4/build/toastr.min.js')
-    link(rel='stylesheet', href='https://unpkg.com/toastr@2.1.4/build/toastr.min.css')
+    script(type='text/javascript', src= cdn_url + '/clipboard@2.0.11/dist/clipboard.min.js')
+    script(type='text/javascript', src= cdn_url + '/toastr@2.1.4/build/toastr.min.js')
+    link(rel='stylesheet', href= cdn_url + '/toastr@2.1.4/build/toastr.min.css')
 
   if theme.dark == true
     include darkmode.pug
