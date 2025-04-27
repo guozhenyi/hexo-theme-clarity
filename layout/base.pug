@@ -16,7 +16,8 @@ if config.feed
 doctype html
 html(lang=config.language)
   include _partial/head.pug
-  body: .body_container
+  - var bodyStyle = theme.site_bg_img ? {'background-image': 'url('+ theme.site_bg_img +')'} : undefined;
+  body(style=bodyStyle): .body_container
     header#header
       .site-name
         h1.hidden= current_title

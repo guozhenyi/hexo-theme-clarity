@@ -121,6 +121,9 @@ cdn_providers: ## List of public CDN providers
   jsdelivr: https://cdn.jsdelivr.net/npm
   fastly: https://fastly.jsdelivr.net/npm
 
+# Site background image link
+site_bg_img:
+
 menu:
   - page: home
     directory: .
