@@ -1,5 +1,6 @@
 .widget
   .widget-title
-    i.fa.fa-file-o= ' ' + __('recent')
+    i.fa.fa-file-o
+    span= __('recent')
   if theme.recent_post_num > 0
     != list_posts({amount: theme.recent_post_num})
