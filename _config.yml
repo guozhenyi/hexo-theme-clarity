@@ -124,6 +124,10 @@ cdn_providers: ## List of public CDN providers
 # Site background image link
 site_bg_img:
 
+# Post page settings
+post_meta:
+  open_graph: true # Whether to enable Open Graph.
+
 menu:
   - page: home
     directory: .

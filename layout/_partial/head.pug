@@ -16,7 +16,8 @@ head
     meta(name='date', content=page.date.format('YYYY-MM-DDTHH:mm:ssZ'))
     meta(name='last-modified', content=page.updated.format('YYYY-MM-DDTHH:mm:ssZ'))
     //- Open Graph 协议
-    != open_graph()
+    if theme.post_meta.open_graph
+      != open_graph()
     link(rel='canonical', href=page.permalink)
   block title
   link(rel='icon', mask='',sizes='any', href=url_for('favicon.ico'))
