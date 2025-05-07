@@ -74,6 +74,9 @@ div {
     box-sizing: border-box;
 }
 
+.mr-4 { margin-right: 4px; }
+.ml-4 { margin-left: 4px; }
+
 #header {
     padding: 58px 0 0;
     text-align: left;
@@ -350,30 +353,12 @@ div {
         display: inline;
         text-indent: .15em;
 
-        &:before {
-            font-family: "FontAwesome";
-            content: "\f073";
-            padding-right: 0.3em;
-        }
-
-        &-label {
+        .post-meta-label {
             margin-right: 4px;
         }
 
-        .category {
-            &:before {
-                font-family: "FontAwesome";
-                content: "\f07c";
-                padding-right: 0.3em;
-            }
-        }
-
-        #busuanzi_value_page_pv {
-            &:before {
-                font-family: "FontAwesome";
-                content: "\f024";
-                padding-right: 0.3em;
-            }
+        .post-meta-separator {
+            margin: 0 5px;
         }
     }
 
@@ -413,6 +398,21 @@ div {
 
         &:hover {
             color: #444;
+        }
+    }
+
+    .post-comment-count {
+        padding: 0;
+        margin: 15px 0 0;
+        color: #6E7173;
+        float: right;
+        display: inline;
+        text-indent: .15em;
+        user-select: none;
+
+        &:hover, &:active {
+            color: #444;
+            text-decoration: none;
         }
     }
 

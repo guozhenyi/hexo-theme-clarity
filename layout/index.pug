@@ -17,6 +17,7 @@ block content
           a(href=url_for(post.path))
             +title(post)
         .post-meta
+          i.fa.fa-calendar.mr-4
           span.post-meta-label= '发表于'
           time.post-meta-published= post.date.format(config.date_format)
         if theme.disqus.enable == true

@@ -7,18 +7,22 @@ block content
   main.post
     h1.post-title= page.title
     .post-meta
+      i.fa.fa-calendar.mr-4
       span.post-meta-label= '发表于'
       time.post-meta-published= page.date.format(config.date_format)
       if page.categories.length > 0
-        span= ' | '
+        span.post-meta-separator= '|'
         span.category
+          i.fa.fa-folder-open.mr-4
           for category in page.categories.toArray()
             a(href=url_for(category.path))= category.name
       if theme.busuanzi == true
+        span.post-meta-separator= '|'
         script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
+        span#busuanzi_container_page_pv
+          i.fa.fa-flag.mr-4
           span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
+          span.ml-4= __('Hits')
       if theme.wordcount == true
         include _partial/wordcount.pug
     if theme.disqus.enable == true
@@ -26,16 +30,18 @@ block content
     if theme.changyan
       a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
         span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
+        span.ml-4= __('Comment')
       script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
     if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
+      a.post-comment-count(href=url_for(page.path) + '#vcomment')
+        i.fa.fa-comment-o.mr-4
         span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
+        span.ml-4= __('Comment')
     if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
+      a.post-comment-count(href=url_for(page.path) + '#waline')
+        i.fa.fa-comment-o.mr-4
         span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
+        span.ml-4= __('Comment')
     if page.toc
       .clear
         #toc.toc-article
