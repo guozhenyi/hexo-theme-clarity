@@ -3,17 +3,21 @@
     a.info-avatar(href='/about/', title= __('about'))
       img.nofancybox(src=theme.info.avatar)
     .info-description #{theme.info.discription}
+
   .site-info
     .site-info__item
-      a(href='/archives/')
+      a(href= `${url_for(config.archive_dir)}/`)
         div.item__label 文章
         div.item__value= site.posts.length
     .site-info__item
-      div.item__label 标签
-      div.item__value= site.tags.length
+      a(href= site.tags.length ? `${url_for(config.tag_dir)}/` : '#')
+        div.item__label 标签
+        div.item__value= site.tags.length
     .site-info__item
-      div.item__label 分类
-      div.item__value= site.categories.length
+      a(href= site.categories.length ? `${url_for(config.category_dir)}/` : '#')
+        div.item__label 分类
+        div.item__value= site.categories.length
+
   if theme.info.outlinkitem
     .social-info
       - for (var item of theme.info.outlinkitem)
