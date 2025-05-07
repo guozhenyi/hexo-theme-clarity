@@ -154,6 +154,11 @@ widgets: ## Seven widgets in sidebar provided: search, info, category, tag, rece
 info:
   avatar: /img/avatar.png
   discription: To be a better man.
+  follow:
+    enable: true
+    icon: fa fa-github
+    text: Follow Me
+    link: https://github.com/username
   outlinkitem:
     - name: github # fa-{name}
       outlink: https://github.com/username

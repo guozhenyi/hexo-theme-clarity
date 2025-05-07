@@ -18,6 +18,11 @@
         div.item__label 分类
         div.item__value= site.categories.length
 
+  if theme.info.follow.enable
+    a#site-follow-btn(href=theme.info.follow.link)
+      i.mr-4(class=theme.info.follow.icon)
+      span=theme.info.follow.text
+
   if theme.info.outlinkitem
     .social-info
       - for (var item of theme.info.outlinkitem)
