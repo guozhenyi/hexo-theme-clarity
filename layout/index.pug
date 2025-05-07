@@ -7,7 +7,7 @@ block title
     title= config.title
 
 block content
-  .post-home
+  .home-post-list
     for post in page.posts.toArray()
       .post
         h1.post-title
@@ -42,6 +42,7 @@ block content
           a(href=url_for(post.path))= __('Readmore')
 
   include _partial/paginator.pug
+
   if theme.disqus.enable == true
     script#dsq-count-scr(src='//'+ theme.disqus.shortname + '.disqus.com/count.js', async)
   if theme.changyan
