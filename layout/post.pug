@@ -4,7 +4,7 @@ block title
   title= page.title + ' | ' + config.title
 
 block content
-  main.post
+  .post
     h1.post-title= page.title
     .post-meta
       i.fa.fa-calendar.mr-4
@@ -24,6 +24,7 @@ block content
           span.ml-4= __('Hits')
       if theme.wordcount == true
         include _partial/wordcount.pug
+
     if theme.disqus.enable == true
       a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
     if theme.changyan
@@ -41,13 +42,16 @@ block content
         i.fa.fa-comment-o.mr-4
         span.waline-comment-count(id=url_for(page.path))
         span.ml-4= __('Comment')
+
     if page.toc
       .clear
         #toc.toc-article
           .toc-title= __('contents')
           != toc(page.content, {list_number: theme.toc_number})
+
     article.post-content
       != page.content
+
     if theme.donate.enable == true && page.donate != false
       include _widget/donate.pug
 
