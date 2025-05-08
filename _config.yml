@@ -43,8 +43,9 @@ minivaline: ## See: https://github.com/MiniValine/MiniValine
 waline: ## See: https://waline.js.org/
   enable: false ## If you want to use Waline comment system, please set the value to true.
   serverURL: ## Your server url, e.g. https://your-domain.vercel.app
-  pageSize: 30 ## The desired number of comments shown in each page.
+  pageSize: 20 ## The desired number of comments shown in each page.
   wordLimit: 500 ## Limit the number of words in comments, 0 means no limit.
+  reaction: true ## Whether to show reaction emoji list
   requiredMeta: ['nick','mail'] ## Required user information, e.g. ['nick','mail','link']
   locale: {
     placeholder: '欢迎评论',
