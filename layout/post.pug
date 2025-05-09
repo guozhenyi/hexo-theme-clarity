@@ -39,12 +39,12 @@ block content
         span.ml-4= __('Comment')
       script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
     if theme.valine.enable == true
-      a.post-comment-count(href=url_for(page.path) + '#vcomment')
+      a.post-comment-count(href=url_for(page.path) + '#valine_box')
         i.fa.fa-comment-o.mr-4
         span.valine-comment-count(data-xid=url_for(page.path))
         span.ml-4= __('Comment')
     if theme.waline.enable == true
-      a.post-comment-count(href=url_for(page.path) + '#waline')
+      a.post-comment-count(href=url_for(page.path) + '#waline_box')
         i.fa.fa-comment-o.mr-4
         span.waline-comment-count(data-path=url_for(page.path))
         span.ml-4= __('Comment')

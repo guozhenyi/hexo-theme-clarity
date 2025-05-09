@@ -8,7 +8,6 @@ else if theme.cdn_type in providers
 if theme.fancybox == true
   script(type='text/javascript', src= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', async)
   script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
-  link(rel='stylesheet', type='text/css', href= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
 
 if theme.swiftype
   script.
@@ -19,7 +18,6 @@ if theme.swiftype
     _st('install','#{theme.swiftype}','2.0.0');
 
 if theme.self_search == true
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css)+'/search.css' + '?v=' + theme.version)
   script(type='text/javascript', src=url_for(theme.js) + '/search.js' + '?v=' + theme.version)
   script.
     var search_path = '#{config.search.path}';
@@ -41,10 +39,6 @@ if theme.love == true
 
 if theme.copycode == true
   script(type='text/javascript', src=url_for(theme.js) + '/copycode.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/copycode.css' + '?v=' + theme.version)
-
-if theme.external_css == true
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/external.css' + '?v=' + theme.version)
 
 if theme.busuanzi == true
   script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)

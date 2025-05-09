@@ -1,0 +1,88 @@
+- var providers = theme.cdn_providers
+- var cdn_url = ''
+if theme.cdn_type == 'custom'
+  - cdn_url = theme.cdn_custom_url
+else if theme.cdn_type in providers
+  - cdn_url = providers[theme.cdn_type]
+
+if theme.gitalk.enable == true
+  script(type='text/javascript', src= cdn_url + '/blueimp-md5@2.19.0/js/md5.min.js')
+  script(type='text/javascript', src= cdn_url + '/gitalk@1.8.0/dist/gitalk.min.js')
+  script.
+    var gitalk = new Gitalk({
+      clientID: '#{theme.gitalk.client_id}',
+      clientSecret: '#{theme.gitalk.client_secret}',
+      repo: '#{theme.gitalk.repo}',
+      owner: '#{theme.gitalk.owner}',
+      admin: ['#{theme.gitalk.admin}'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk_box');
+
+if theme.valine.enable == true
+  script(src= cdn_url + '/valine@1.5.3/dist/Valine.min.js')
+  script.
+    var notify = '#{ theme.valine.notify }' == 'true' ? true : false;
+    var verify = '#{ theme.valine.verify }' == 'true' ? true : false;
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = '#{ theme.valine.guest_info }'.split(',').filter(function(item){
+      return GUEST_INFO.indexOf(item) > -1
+    });
+    guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+    window.valine = new Valine({
+      el:'#valine_box',
+      notify:notify,
+      verify:verify,
+      appId:'#{theme.valine.appid}',
+      appKey:'#{theme.valine.appkey}',
+      serverURLs:'#{theme.valine.serverURLs}',
+      placeholder:'#{theme.valine.placeholder}',
+      avatar:'#{theme.valine.avatar}',
+      guest_info:guest_info,
+      pageSize:'#{theme.valine.pageSize}'
+    });
+
+if theme.minivaline.enable == true
+  script(src= cdn_url + '/minivaline@6.1.0/dist/MiniValine.min.js')
+  script.
+    new MiniValine({
+      el: '#minivaline_box',
+      appId: '#{theme.minivaline.appId}',
+      appKey: '#{theme.minivaline.appKey}',
+      placeholder: '#{theme.minivaline.placeholder}',
+      lang: '#{theme.minivaline.lang}',
+      adminEmailMd5: '#{theme.minivaline.adminEmailMd5}',
+      math: #{theme.minivaline.math},
+      md: #{theme.minivaline.md}
+    });
+
+if theme.waline.enable == true
+  script(type='module').
+    import {init} from '#{cdn_url}/@waline/client@3.5.6/dist/waline.js';
+    init({
+      el: '#waline_box',
+      serverURL: '#{theme.waline.serverURL}',
+      comment: true,
+      pageview: true,
+      pageSize: #{theme.waline.pageSize || 10},
+      wordLimit: #{theme.waline.wordLimit || 1000},
+      reaction: #{theme.waline.reaction || false},
+      requiredMeta: !{JSON.stringify(theme.waline.requiredMeta || {})},
+      locale: !{JSON.stringify(theme.waline.locale || {})},
+      emoji: [
+        '#{cdn_url}/@waline/emojis@1.3.0/weibo',
+        '#{cdn_url}/@waline/emojis@1.3.0/qq',
+        '#{cdn_url}/@waline/emojis@1.3.0/tw-emoji',
+      ],
+    });
+
+if theme.twikoo.enable == true
+  script(src= cdn_url + '/twikoo@1.6.41/dist/twikoo.all.min.js')
+  script.
+    twikoo.init({
+      envId: '#{theme.twikoo.envId}',
+      el: '#twikoo_box',
+      region: '#{theme.twikoo.region}',
+      path: '#{theme.twikoo.path}'
+    });
