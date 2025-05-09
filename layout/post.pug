@@ -22,7 +22,7 @@ block content
           i.fa.fa-eye.mr-4
           span.waline-pageview-count(data-path=url_for(page.path))
           span.ml-4= __('Hits')
-      else if theme.busuanzi == true
+      else if theme.busuanzi.post_enable == true
         span.post-meta-separator= '|'
         span#busuanzi_container_page_pv
           i.fa.fa-eye.mr-4

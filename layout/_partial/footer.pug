@@ -1,9 +1,9 @@
 footer#footer
-  span(style={'margin-right': '10px'})= '© ' + date(Date.now(), 'YYYY') + ' '
+  span.mr-10= '© ' + date(Date.now(), 'YYYY') + ' '
     a(href=url_for('.'), rel='nofollow')= config.title
 
   if theme.show_forever
-    span(style={'margin-right': '10px'})
+    span.mr-10
       a(target='_blank', href='https://www.foreverblog.cn') 《十年之约》
 
   if theme.icp && theme.bei
@@ -19,12 +19,21 @@ footer#footer
 
   <br>
 
-  div.github-badge
+  div.github-badge.mr-10
     a(rel='nofollow', target='_blank', href='https://hexo.io')
       span.badge-subject Powered by
       span.badge-value.bg-blue Hexo
 
-  div.github-badge(style='margin-left: 5px')
+  div.github-badge
     a(rel='nofollow', target='_blank', href='https://github.com/guozhenyi/hexo-theme-clarity')
       span.badge-subject Theme
       span.badge-value.bg-green Clarity
+
+  if theme.busuanzi.site_enable == true
+    div.site-stat
+      span.mr-10
+        span.mr-4 本站总访客数
+        span#busuanzi_value_site_uv
+      span
+        span.mr-4 本站总访问量
+        span#busuanzi_value_site_pv

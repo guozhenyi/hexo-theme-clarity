@@ -40,7 +40,7 @@ if theme.love == true
 if theme.copycode == true
   script(type='text/javascript', src=url_for(theme.js) + '/copycode.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
 
-if theme.busuanzi == true
+if theme.busuanzi.site_enable == true || theme.busuanzi.post_enable == true
   script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
 
 if page.mathjax
