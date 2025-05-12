@@ -84,6 +84,7 @@ After that, just change the theme configuration information in the _config.clari
 - waline - [Waline](https://waline.js.org) comment system
 - utterances - [Utterances](https://utteranc.es) comment system
 - twikoo - [Twikoo](https://twikoo.js.org) comment system
+- Artalk - [Artalk](https://artalk.js.org) comment system
 - google_search - Default search engine
 - baidu_search - Search engine for users in China
 - swiftype - [Swiftype Search](https://swiftype.com) key

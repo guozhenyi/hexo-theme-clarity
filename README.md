@@ -84,6 +84,7 @@ cp themes/clarity/_config.yml _config.clarity.yml
 - waline - [Waline](https://waline.js.org) 评论系统
 - utterances - [Utterances](https://utteranc.es) 评论系统
 - twikoo - [Twikoo](https://twikoo.js.org) 评论系统
+- Artalk - [Artalk](https://artalk.js.org) 评论系统
 - google_search - 默认使用Google搜索引擎
 - baidu_search - 若想使用百度搜索，将其设定为 `true`
 - swiftype - [Swiftype Search](https://swiftype.com) key
