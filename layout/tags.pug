@@ -1,0 +1,15 @@
+extends base
+
+block title
+  title= page.title + ' | ' + config.title
+
+block content
+  .post
+    h1.post-title= page.title
+    .post-content
+      .tags-page
+        //- h1 所有标签
+        ul
+          each tag in site.tags.toArray()
+            li
+              a(href=url_for(tag.path))= tag.name + " (" + tag.length + ")"

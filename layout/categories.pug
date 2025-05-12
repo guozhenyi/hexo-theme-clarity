@@ -1,0 +1,14 @@
+extends base
+
+block title
+  title= page.title + ' | ' + config.title
+
+block content
+  .post
+    h1.post-title= page.title
+    .post-content
+      .categories-page
+        ul
+          each category in site.categories.toArray()
+            li
+              a(href=url_for(category.path))= category.name + " (" + category.length + ")"
