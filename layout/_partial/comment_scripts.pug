@@ -81,8 +81,17 @@ if theme.twikoo.enable == true
   script(src= cdn_url + '/twikoo@1.6.41/dist/twikoo.all.min.js')
   script.
     twikoo.init({
-      envId: '#{theme.twikoo.envId}',
       el: '#twikoo_box',
+      envId: '#{theme.twikoo.envId}',
       region: '#{theme.twikoo.region}',
       path: '#{theme.twikoo.path}'
+    });
+
+if theme.artalk.enable == true
+  script(src= cdn_url + '/artalk@2.9.1/dist/Artalk.js')
+  script.
+    Artalk.init({
+      el: '#artalk_box',
+      server: '#{theme.artalk.server}',
+      site: '#{config.title}'
     });

@@ -61,6 +61,9 @@ twikoo: ## See: https://twikoo.js.org
   envId: ## Tencent CloudBase envId
   region: ## Tencent CloudBase region, e.g. ap-shanghai
   path: ## Article path, e.g. window.location.pathname
+artalk: ## https://artalk.js.org/guide/frontend/config.html
+  enable: false ## If you want to use Artalk comment system, please set the value to true.
+  server: ## Artalk server url, e.g. https://artalk.example.com
 
 google_search: true ## Use Google search, true/false.
 baidu_search: false ## Use Baidu search, true/false.
@@ -129,7 +132,7 @@ site_bg_img:
 
 # Post page settings
 post_meta:
-  open_graph: true # Whether to enable Open Graph.
+  open_graph: true ## Whether to enable Open Graph.
 
 menu:
   - page: home

@@ -45,6 +45,8 @@ head
     link(rel='stylesheet', type='text/css', href= cdn_url + '/gitalk@1.8.0/dist/gitalk.css')
   if theme.waline.enable == true
     link(rel='stylesheet', type='text/css', href= cdn_url + '/@waline/client@3.5.6/dist/waline.css')
+  if theme.artalk.enable == true
+    link(rel='stylesheet', type='text/css', href= cdn_url + '/artalk@2.9.1/dist/Artalk.css')
   script(type='text/javascript', src= cdn_url + '/jquery@3.7.1/dist/jquery.min.js')
   if config.feed
     link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
