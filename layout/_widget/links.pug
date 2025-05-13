@@ -1,7 +1,9 @@
-.widget
-  .widget-title
-    i.fa.fa-external-link
-    span= __('blogroll')
-  - for (var i in theme.links)
+if theme.widget.link.enable
+  .widget
+    .widget-title
+      i.fa.fa-external-link
+      span= __('blogroll')
     ul
-    a(href=theme.links[i].url, title=theme.links[i].title, target='_blank') #{theme.links[i].title}
+      - for (let link of theme.links)
+        li
+          a(href=link.url, title=link.title, target='_blank') #{link.title}

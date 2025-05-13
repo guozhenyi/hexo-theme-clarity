@@ -1,6 +1,7 @@
-.widget
-  .widget-title
-    i.fa.fa-file
-    span= __('recent')
-  if theme.recent_post_num > 0
-    != list_posts({amount: theme.recent_post_num})
+if theme.widget.post.enable
+  .widget
+    .widget-title
+      i.fa.fa-file
+      span= __('recent')
+    if theme.widget.post.limit > 0
+      != list_posts({amount: theme.widget.post.limit})

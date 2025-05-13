@@ -73,7 +73,6 @@ google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 microsoft_clarity: ## Your Microsoft Clarity tracking id, e.g. zg2ctuea9j
 fancybox: false ## If you want to use fancybox please set the value to true.
-show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: false ## If you want to add list number to toc please set the value to true.
 shareto: false ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
 busuanzi: ## Busuanzi statistic
@@ -113,8 +112,7 @@ totop: true ## If you want to use the rocketship button to return to the top, se
 external_css: false ## If you want to load an external CSS file, set the value to true and create a file named "external.css" in the source/css folder.
 post_content_length: 180 ## Set the length of the post summary displayed on home page when no description written.
 show_forever: false ## Whether to display foreverblog link in footer.
-recent_post_num: 5 ## Recent post number
-recent_comment_num: 5 ## Recent comment number
+
 icp: ## China mainland only, show icp info on the bottom.
 bei: ## China mainland only, show bei info on the bottom.
 
@@ -147,14 +145,24 @@ menu:
     directory: atom.xml
     icon: fa-rss
 
-widgets: ## Seven widgets in sidebar provided: search, info, category, tag, recent_posts, recent_comments and links.
-  - search
-  - info
-  - category
-  - tag
-  # - recent_posts
-  # - recent_comments
-  # - links
+widget:
+  search: ## Search Widget
+    enable: true
+  info: ## Personal info widget
+    enable: true
+  category: ## Category widget
+    enable: true
+    show_count: true ## Show the count of categories
+  tag: ## Tag widget
+    enable: true
+  post: ## Recent post widget
+    enable: true
+    limit: 5
+  comment: ## Recent comment widget
+    enable: true
+    limit: 5
+  link: ## Friend link widget
+    enable: true
 
 info:
   avatar: /img/avatar.png

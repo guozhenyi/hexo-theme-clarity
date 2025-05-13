@@ -1,6 +1,7 @@
-.widget
-  .widget-title
-    i.fa.fa-tags
-    span= __('tags')
-  .tagcloud
-    != tagcloud({min_font: 16, max_font: 24, amount: 100, color: true, start_color: '#007bff', end_color: '#ff4500', orderby: 'random'})
+if theme.widget.tag.enable
+  .widget
+    .widget-title
+      i.fa.fa-tags
+      span= __('tags')
+    .tagcloud
+      != tagcloud({min_font: 16, max_font: 24, amount: 100, color: true, start_color: '#007bff', end_color: '#ff4500', orderby: 'random'})

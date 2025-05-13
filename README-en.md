@@ -93,7 +93,6 @@ After that, just change the theme configuration information in the _config.clari
 - baidu_analytics - [Baidu Analytics](https://tongji.baidu.com) tracking id
 - microsoft_clarity - [Microsoft Clarity](https://clarity.microsoft.com/) tracking id
 - fancybox - Enable [Fancybox](https://fancyapps.com/fancybox/)
-- show_category_count - Show the count of categories in the sidebar widget
 - toc_number - Show the list number of toc
 - shareto - Enable share button, with the dependency on the plugin [hexo-helper-qrcode](https://github.com/yscoder/hexo-helper-qrcode)
 - busuanzi - Enable [Busuanzi](http://ibruce.info) page views
@@ -111,10 +110,8 @@ After that, just change the theme configuration information in the _config.clari
 - external_css - Enable loading an external CSS file
 - post_content_length - Abstract length of each post
 - show_forever - Whether to display foreverblog link in footer.
-- recent_post_num - Recent post number
-- recent_comment_num - Recent comment number
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](https://fontawesome.com) icon fonts have been integrated, and you can choose other icons which you like [here](https://fontawesome.com/icons/) and use them according to the instruction.
-- widgets - Choose and arrange the widgets in sidebar here.
+- widget - Choose and arrange the widgets in sidebar here.
 - info - Set your personal information of the info widget here.
 - links - Edit your blogroll here, and an independent blogroll page can be displayed by setting `layout: blogroll` of a page.
 - timeline - Show a timeline of the website by setting `layout: timeline` of a page.

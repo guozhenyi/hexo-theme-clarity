@@ -93,7 +93,6 @@ cp themes/clarity/_config.yml _config.clarity.yml
 - baidu_analytics - [Baidu Analytics](https://tongji.baidu.com) 跟踪ID
 - microsoft_clarity - [Microsoft Clarity](https://clarity.microsoft.com/) 跟踪ID
 - fancybox - 是否启用 [Fancybox](https://fancyapps.com/fancybox/) 图片灯箱效果
-- show_category_count - 是否在侧边栏显示分类数目
 - toc_number - Show the list number of toc
 - shareto - 是否显示分享按钮, 需要安装 [hexo-helper-qrcode](https://github.com/yscoder/hexo-helper-qrcode) 插件使用
 - busuanzi - 是否使用 [不蒜子](http://ibruce.info) 页面访问统计
@@ -111,13 +110,11 @@ cp themes/clarity/_config.yml _config.clarity.yml
 - external_css - 是否加载外部CSS文件
 - post_content_length - Abstract length of each post
 - show_forever - 是否在页脚显示十年之约的链接
-- recent_post_num - 最近文章显示数量
-- recent_comment_num - 最近评论显示数量
 - icp - ICP 备案号
 - bei - 网安备案号
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](https://fontawesome.com) icon fonts have been integrated, and you can choose other icons which you like [here](https://fontawesome.com/icons/) and use them according to the instruction.
-- widgets - Choose and arrange the widgets in sidebar here.
-- info - Set your personal information of the info widget here.
+- widget - 控制在侧边栏显示的组件
+- info - 控制侧边栏个人信息的显示内容
 - links - Edit your blogroll here, and an independent blogroll page can be displayed by setting `layout: blogroll` of a page.
 - timeline - 网站历史时间线，在页面 `front-matter` 中设置 `layout: timeline` 可显示
 - Static files - 静态文件存储路径，方便设置CDN缓存。

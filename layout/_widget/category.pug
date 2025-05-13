@@ -1,5 +1,6 @@
-.widget
-  .widget-title
-    i.fa.fa-folder-open
-    span= __('categories')
-  != list_categories({show_count: theme.show_category_count})
+if theme.widget.category.enable
+  .widget
+    .widget-title
+      i.fa.fa-folder-open
+      span= __('categories')
+    != list_categories({show_count: theme.widget.category.show_count})

@@ -1,31 +1,32 @@
-.widget
-  .author-info
-    a.info-avatar(href='/about/', title= __('about'))
-      img.nofancybox(src=theme.info.avatar)
-    .info-description #{theme.info.discription}
+if theme.widget.info.enable
+  .widget
+    .author-info
+      a.info-avatar(href='/about/', title= __('about'))
+        img.nofancybox(src=theme.info.avatar)
+      .info-description #{theme.info.discription}
 
-  .site-info
-    .site-info__item
-      a(href= `${url_for(config.archive_dir)}/`)
-        div.item__label 文章
-        div.item__value= site.posts.length
-    .site-info__item
-      a(href= site.tags.length ? `${url_for(config.tag_dir)}/` : '#')
-        div.item__label 标签
-        div.item__value= site.tags.length
-    .site-info__item
-      a(href= site.categories.length ? `${url_for(config.category_dir)}/` : '#')
-        div.item__label 分类
-        div.item__value= site.categories.length
+    .site-info
+      .site-info__item
+        a(href= `${url_for(config.archive_dir)}/`)
+          div.item__label 文章
+          div.item__value= site.posts.length
+      .site-info__item
+        a(href= site.tags.length ? `${url_for(config.tag_dir)}/` : '#')
+          div.item__label 标签
+          div.item__value= site.tags.length
+      .site-info__item
+        a(href= site.categories.length ? `${url_for(config.category_dir)}/` : '#')
+          div.item__label 分类
+          div.item__value= site.categories.length
 
-  if theme.info.follow.enable
-    a#site-follow-btn(href=theme.info.follow.link)
-      i.mr-4(class=theme.info.follow.icon)
-      span=theme.info.follow.text
+    if theme.info.follow.enable
+      a#site-follow-btn(href=theme.info.follow.link)
+        i.mr-4(class=theme.info.follow.icon)
+        span=theme.info.follow.text
 
-  if theme.info.outlinkitem
-    .social-info
-      - for (var item of theme.info.outlinkitem)
-        - var styled= item.color ? {color: item.color} : undefined
-        a.info-icon(href=item.outlink, title=item.message, target='_blank', style=styled)
-          i.fa(class='fa-' + item.name)
+    if theme.info.outlinkitem
+      .social-info
+        - for (var item of theme.info.outlinkitem)
+          - var styled= item.color ? {color: item.color} : undefined
+          a.info-icon(href=item.outlink, title=item.message, target='_blank', style=styled)
+            i.fa(class='fa-' + item.name)
