@@ -5,10 +5,12 @@ disqus:
   apikey: ## Your API key obtained in Disqus API Application, e.g. yk00ZB1fjYGRkrCrDDRYDUjpp26GJWJiJRZQZ5SY0r3th5FMW6pnSzQMnWH7ua7r
   admin: ## Username of your Disqus moderator, e.g. username
   admin_label: ## The text of Disqus moderator badge, e.g. Mod
+
 uyan: ## Your uyan_id. e.g. 1234567
 livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
 changyan: ## Your changyan appid, e.g. cyrALsXc8
 changyan_conf: ## Your changyan conf, e.g. prod_d8a508c2825ab57eeb43e7c69bba0e8b
+
 gitalk: ## See: https://github.com/gitalk/gitalk
   enable: false ## If you want to use Gitment comment system please set the value to true.
   owner: ## Your GitHub ID, e.g. username
@@ -16,6 +18,7 @@ gitalk: ## See: https://github.com/gitalk/gitalk
   client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
   admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
+
 valine: ## See: https://valine.js.org
   enable: false ## If you want to use Valine comment system, please set the value to true.
   appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
@@ -27,6 +30,7 @@ valine: ## See: https://valine.js.org
   avatar: "mm" ## Gravatar type, see https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
   pageSize: 10 ## Number of comments per page.
   guest_info: nick,mail,link ## Attributes of reviewers.
+
 minivaline: ## See: https://github.com/MiniValine/MiniValine
   enable: false ## If you want to use MiniValine comment system, please set the value to true.
   appId: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
@@ -40,6 +44,7 @@ minivaline: ## See: https://github.com/MiniValine/MiniValine
   # Available values: en  | zh-CN | (and many more)
   # More i18n info: https://github.com/MiniValine/minivaline-i18n
   lang:
+
 waline: ## See: https://waline.js.org/
   enable: false ## If you want to use Waline comment system, please set the value to true.
   serverURL: ## Your server url, e.g. https://your-domain.vercel.app
@@ -51,16 +56,19 @@ waline: ## See: https://waline.js.org/
     placeholder: '欢迎评论',
     sofa: '来发评论吧~'
   }
+
 utterances: ## See: https://utteranc.es
   enable: false ## If you want to use Utterances comment system, please set the value to true.
   repo: ## The repository utterances will connect to, e.g. tufu9441/comments
   identifier: title ## The mapping between blog posts and GitHub issues.
   theme: github-light ## Choose an Utterances theme which matches your blog.
+
 twikoo: ## See: https://twikoo.js.org
   enable: false ## If you want to use twikoo comment system, please set the value to true.
   envId: ## Tencent CloudBase envId
   region: ## Tencent CloudBase region, e.g. ap-shanghai
   path: ## Article path, e.g. window.location.pathname
+
 artalk: ## https://artalk.js.org/guide/frontend/config.html
   enable: false ## If you want to use Artalk comment system, please set the value to true.
   server: ## Artalk server url, e.g. https://artalk.example.com
@@ -72,7 +80,7 @@ self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 microsoft_clarity: ## Your Microsoft Clarity tracking id, e.g. zg2ctuea9j
-fancybox: false ## If you want to use fancybox please set the value to true.
+fancybox: true ## If you want to use fancybox please set the value to true.
 toc_number: false ## If you want to add list number to toc please set the value to true.
 shareto: false ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
 busuanzi: ## Busuanzi statistic
@@ -80,17 +88,20 @@ busuanzi: ## Busuanzi statistic
   post_enable: false ## Whether to enable post statistic.
 wordcount: false ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+
 algolia: ## Algolia docsearch
   enable: false
   app_id:
   api_key:
   index_name:
+
 canvas_nest:
   enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
   color: ## RGB value of the color, e.g. "100,99,98"
   opacity: ## Transparency of lines, e.g. "0.7"
   zIndex: ## The z-index property of the background, e.g. "-1"
   count: ## Quantity of lines, e.g. "150"
+
 donate:
   enable: false ## If you want to display the donate button after each post, please set the value to true and fill the following items on your need. You can also enable donate button in a page by adding a "donate: true" item to the front-matter.
   github: ## GitHub URL, e.g. https://github.com/Kaiyuan/donate-page
@@ -99,6 +110,7 @@ donate:
   btc_qr: ## Path of Bitcoin QRcode image, e.g. /img/BTCQR.png
   btc_key: ## Bitcoin key, e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L
   paypal_url: ## Paypal URL, e.g. https://www.paypal.me/username
+
 post_copyright:
   enable: false ## If you want to display the copyright info after each post, please set the value to true and fill the following items on your need.
   copyright_text: ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
