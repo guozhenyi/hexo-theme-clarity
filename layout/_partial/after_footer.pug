@@ -6,8 +6,8 @@ else if theme.cdn_type in providers
   - cdn_url = providers[theme.cdn_type]
 
 if theme.fancybox == true
-  script(type='text/javascript', src= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', async)
-  script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
+  script(src= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', async)
+  script(src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
 
 if theme.swiftype
   script.
@@ -18,7 +18,7 @@ if theme.swiftype
     _st('install','#{theme.swiftype}','2.0.0');
 
 if theme.self_search == true
-  script(type='text/javascript', src=url_for(theme.js) + '/search.js' + '?v=' + theme.version)
+  script(src=url_for(theme.js) + '/search.js' + '?v=' + theme.version)
   script.
     var search_path = '#{config.search.path}';
     if (search_path.length == 0) {
@@ -32,13 +32,13 @@ if theme.canvas_nest.enable == true
   - var opacity=theme.canvas_nest.opacity || "0.5"
   - var zIndex=theme.canvas_nest.zIndex || "-2"
   - var count=theme.canvas_nest.count || "50"
-  script(type='text/javascript', color=color, opacity=opacity, zIndex=zIndex, count=count, src= cdn_url + '/canvas-nest.js@2.0.4/dist/canvas-nest.js')
+  script(color=color, opacity=opacity, zIndex=zIndex, count=count, src= cdn_url + '/canvas-nest.js@2.0.4/dist/canvas-nest.js')
 
 if theme.love == true
-  script(type='text/javascript', src=url_for(theme.js) + '/love.js' + '?v=' + theme.version)
+  script(src=url_for(theme.js) + '/love.js' + '?v=' + theme.version)
 
 if theme.copycode == true
-  script(type='text/javascript', src=url_for(theme.js) + '/copycode.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
+  script(src=url_for(theme.js) + '/copycode.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
 
 if theme.busuanzi.site_enable == true || theme.busuanzi.post_enable == true
   script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
@@ -49,8 +49,8 @@ if page.mathjax
 if page.mathjax2
   include mathjax2.pug
 
-script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
-script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
+script(src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
+script(src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
 
 if theme.algolia.enable == true
   script(src= cdn_url + '/@docsearch/js@3.9.0/dist/umd/index.js')

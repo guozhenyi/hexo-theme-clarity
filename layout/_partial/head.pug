@@ -25,31 +25,37 @@ head
   link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
   link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
   link(rel="preload", href= cdn_url + "/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0", as="font", type="font/woff2", crossorigin="anonymous")
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
+  link(rel='stylesheet', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
+
   if theme.copycode == true
-    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/copycode.css' + '?v=' + theme.version)
+    link(rel='stylesheet', href=url_for(theme.css) + '/copycode.css' + '?v=' + theme.version)
   if theme.external_css == true
-    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/external.css' + '?v=' + theme.version)
+    link(rel='stylesheet', href=url_for(theme.css) + '/external.css' + '?v=' + theme.version)
   if theme.self_search == true
-    link(rel='stylesheet', type='text/css', href=url_for(theme.css)+'/search.css' + '?v=' + theme.version)
-  //- link(rel='stylesheet', type='text/css', href= cdn_url + '/normalize.css@8.0.1/normalize.css')
-  link(rel='stylesheet', type='text/css', href= cdn_url + '/purecss@3.0.0/build/pure-min.css')
-  link(rel='stylesheet', type='text/css', href= cdn_url + '/purecss@3.0.0/build/grids-responsive-min.css')
-  link(rel='stylesheet', type='text/css', href= cdn_url + '/font-awesome@4.7.0/css/font-awesome.min.css')
-  link(rel='stylesheet', type='text/css', href= cdn_url + '/@docsearch/css@3.9.0/dist/style.css')
+    link(rel='stylesheet', href=url_for(theme.css)+'/search.css' + '?v=' + theme.version)
+
+  //- link(rel='stylesheet', href= cdn_url + '/normalize.css@8.0.1/normalize.css')
+  link(rel='stylesheet', href= cdn_url + '/purecss@3.0.0/build/pure-min.css')
+  link(rel='stylesheet', href= cdn_url + '/purecss@3.0.0/build/grids-responsive-min.css')
+  link(rel='stylesheet', href= cdn_url + '/font-awesome@4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href= cdn_url + '/@docsearch/css@3.9.0/dist/style.css')
+
   if theme.fancybox == true
-    link(rel='stylesheet', type='text/css', href= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+    link(rel='stylesheet', href= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
   if theme.disqus.enable == true
-    link(rel='stylesheet', type='text/css', href= cdn_url + '/disqusjs@1.3.0/dist/disqusjs.css')
+    link(rel='stylesheet', href= cdn_url + '/disqusjs@1.3.0/dist/disqusjs.css')
   if theme.gitalk.enable == true
-    link(rel='stylesheet', type='text/css', href= cdn_url + '/gitalk@1.8.0/dist/gitalk.css')
+    link(rel='stylesheet', href= cdn_url + '/gitalk@1.8.0/dist/gitalk.css')
   if theme.waline.enable == true
-    link(rel='stylesheet', type='text/css', href= cdn_url + '/@waline/client@3.5.6/dist/waline.css')
+    link(rel='stylesheet', href= cdn_url + '/@waline/client@3.5.6/dist/waline.css')
   if theme.artalk.enable == true
-    link(rel='stylesheet', type='text/css', href= cdn_url + '/artalk@2.9.1/dist/Artalk.css')
-  script(type='text/javascript', src= cdn_url + '/jquery@3.7.1/dist/jquery.min.js')
+    link(rel='stylesheet', href= cdn_url + '/artalk@2.9.1/dist/Artalk.css')
+
+  script(src= cdn_url + '/jquery@3.7.1/dist/jquery.min.js')
+
   if config.feed
     link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
+
   if theme.google_analytics
     script(src='https://www.googletagmanager.com/gtag/js?id=' + theme.google_analytics, async)
     script.
@@ -67,6 +73,7 @@ head
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
         })();
+
   if theme.microsoft_clarity
     script.
       (function(c,l,a,r,i,t,y){
@@ -76,9 +83,9 @@ head
       })(window, document, "clarity", "script", "#{theme.microsoft_clarity}");
 
   if !(theme.copycode == false && (theme.donate.enable == false && page.donate != true) && theme.post_copyright.enable == false)
-    link(rel='stylesheet', type='text/css', href= cdn_url + '/toastr@2.1.4/build/toastr.min.css')
-    script(type='text/javascript', src= cdn_url + '/clipboard@2.0.11/dist/clipboard.min.js')
-    script(type='text/javascript', src= cdn_url + '/toastr@2.1.4/build/toastr.min.js')
+    link(rel='stylesheet', href= cdn_url + '/toastr@2.1.4/build/toastr.min.css')
+    script(src= cdn_url + '/clipboard@2.0.11/dist/clipboard.min.js')
+    script(src= cdn_url + '/toastr@2.1.4/build/toastr.min.js')
 
   if theme.dark == true
     include darkmode.pug

@@ -5,7 +5,7 @@ if theme.widget.comment.enable
         i.fa.fa-comment
         span= __('recent_comments')
       if theme.widget.comment.limit > 0
-        script(type='text/javascript', src='//' + theme.disqus.shortname + '.disqus.com/recent_comments_widget.js?num_items=' + theme.widget.comment.limit + '&hide_avatars=1&avatar_size=32&excerpt_length=20&hide_mods=1')
+        script(src='//' + theme.disqus.shortname + '.disqus.com/recent_comments_widget.js?num_items=' + theme.widget.comment.limit + '&hide_avatars=1&avatar_size=32&excerpt_length=20&hide_mods=1')
 
   if theme.waline.enable == true
     .widget
@@ -14,4 +14,4 @@ if theme.widget.comment.enable
         span= __('recent_comments')
       if theme.widget.comment.limit > 0
         #widget-waline-list
-        script(type='text/javascript', id="recent-comment", serverURL=theme.waline.serverURL, count=theme.widget.comment.limit, src=url_for(theme.js) + '/recent-comments.js' + '?v=' + theme.version, async)
+        script(id="recent-comment", serverURL=theme.waline.serverURL, count=theme.widget.comment.limit, src=url_for(theme.js) + '/recent-comments.js' + '?v=' + theme.version, async)

@@ -1,6 +1,6 @@
 #donate
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/donate.css' + '?v=' + theme.version)
-  script(type='text/javascript', src=url_for(theme.js) + '/donate.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
+  link(rel='stylesheet', href=url_for(theme.css) + '/donate.css' + '?v=' + theme.version)
+  script(src=url_for(theme.js) + '/donate.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
   a#github.pos-f.tr3(href=theme.donate.github||'https://github.com/Kaiyuan/donate-page', target='_blank', title='Github')
   #DonateText= 'Donate'
   ul#donateBox.list.pos-f

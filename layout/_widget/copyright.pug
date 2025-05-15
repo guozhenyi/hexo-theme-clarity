@@ -1,6 +1,6 @@
 .post-copyright
-  script(type='text/javascript', src=url_for(theme.js) + '/copyright.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/copyright.css' + '?v=' + theme.version)
+  script(src=url_for(theme.js) + '/copyright.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
+  link(rel='stylesheet', href=url_for(theme.css) + '/copyright.css' + '?v=' + theme.version)
   p
     span= __('copyright_title_prefix')
     = page.title
