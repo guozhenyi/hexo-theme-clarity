@@ -114,6 +114,10 @@ donate:
 post_copyright:
   enable: false ## If you want to display the copyright info after each post, please set the value to true and fill the following items on your need.
   copyright_text: ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
+  author: false
+  created: false
+  updated: false
+
 love: false ## If you want the love to appear when you click anywhere, set the value to true.
 plantuml: ## Using PlantUML to generate UML diagram, must install hexo-filter-plantuml (https://github.com/miao1007/hexo-filter-plantuml).
   render: "PlantUMLServer" ## Local or PlantUMLServer.

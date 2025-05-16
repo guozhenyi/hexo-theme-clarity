@@ -1,25 +1,26 @@
 .post-copyright
-  script(src=url_for(theme.js) + '/copyright.js' + '?v=' + theme.version, successtext=__('copy_success_text'))
-  link(rel='stylesheet', href=url_for(theme.css) + '/copyright.css' + '?v=' + theme.version)
-  p
-    span= __('copyright_title_prefix')
+  div
+    span.copyright-label= __('copyright_title_prefix')
     = page.title
-  p
-    span= __('copyright_author_prefix')
-    = config.author
-  p
-    span= __('copyright_date_prefix')
-    = page.date.format(config.date_format)
-  p
-    span= __('copyright_update_prefix')
-    = page.updated.format(config.date_format)
-  p
-    span= __('copyright_link_prefix')
+  if theme.post_copyright.author
+    div
+      span.copyright-label= __('copyright_author_prefix')
+      = config.author
+  if theme.post_copyright.created
+    div
+      span.copyright-label= __('copyright_date_prefix')
+      = page.date.format(config.date_format)
+  if theme.post_copyright.updated
+    div
+      span.copyright-label= __('copyright_update_prefix')
+      = page.updated.format(config.date_format)
+  div
+    span.copyright-label= __('copyright_link_prefix')
     a(href='/' + page.path)= page.permalink
-    span.copy-path
+    span.copy-icon
       i.fa.fa-clipboard(data-clipboard-text=page.permalink)
-  p
-    span= __('copyright_declare_prefix')
+  div
+    span.copyright-label= __('copyright_declare_prefix')
     if theme.post_copyright.copyright_text
       != theme.post_copyright.copyright_text
     else

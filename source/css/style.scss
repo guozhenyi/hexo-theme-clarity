@@ -8,6 +8,7 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 $primaryColor: #409eff;
 $codeBgColor: #e1e8e9; // 新的代码块背景色
 $hoverColor: #ff5722;
+$linkHoverColor: #409eff; // 链接 Hover 颜色
 
 $originCodeBgColor: #f7f8f8; // 原来的代码块背景色
 $originLinkColor: #01579f; // 原来的链接颜色
@@ -59,7 +60,7 @@ button.submit {
 
 a:hover,
 a:active {
-    color: $primaryColor;
+    color: $linkHoverColor;
 }
 
 a:focus {
@@ -580,6 +581,41 @@ div {
         .post-title {
             font-size: 1.6em;
         }
+    }
+}
+
+.post-copyright {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    font-size: 0.925rem;
+    line-height: 1.6em;
+    word-break: break-all;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .copyright-label {
+      display: inline-block;
+      width: 5.2em;
+      color: #b5b5b5;
+      font-weight: bold;
+    }
+
+    a {
+      color: #808080;
+
+      &:hover {
+        color: $linkHoverColor;
+        text-decoration: underline;
+      }
+    }
+
+    .copy-icon {
+      margin-left: 1em;
+      width: 1em;
+
+      &:hover {
+        color: $linkHoverColor;
+        cursor: pointer;
+      }
     }
 }
 
