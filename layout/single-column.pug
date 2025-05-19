@@ -1,6 +1,8 @@
 extends base-without-sidebar
+
 block title
   title= page.title + ' | ' + config.title
+
 block content
   .post
     h1.post-title= page.title
@@ -8,3 +10,7 @@ block content
       != page.content
   if page.comments
     include _partial/comments.pug
+
+block scripts
+  if page.comments
+    include _partial/comment_scripts.pug

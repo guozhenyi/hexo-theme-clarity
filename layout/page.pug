@@ -1,6 +1,8 @@
 extends base
+
 block title
   title= page.title + ' | ' + config.title
+
 block content
   .post
     h1.post-title= page.title
@@ -10,3 +12,7 @@ block content
     include _widget/donate.pug
   if page.comments
     include _partial/comments.pug
+
+block scripts
+  if page.comments
+    include _partial/comment_scripts.pug
