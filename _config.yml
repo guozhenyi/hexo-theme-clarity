@@ -51,6 +51,7 @@ waline: ## See: https://waline.js.org/
   pageSize: 20 ## The desired number of comments shown in each page.
   wordLimit: 500 ## Limit the number of words in comments, 0 means no limit.
   reaction: true ## Whether to show reaction emoji list
+  emojiSize: medium ## Comment Emoji Size.[large/medium/small]
   requiredMeta: ['nick','mail'] ## Required user information, e.g. ['nick','mail','link']
   locale: {
     placeholder: '欢迎评论',

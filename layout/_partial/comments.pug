@@ -94,7 +94,7 @@ if theme.livere
       })(document, 'script');
 
 if theme.gitalk.enable == true
-  #gitalk_box
+  #gitalk_box.nofancybox
 
 if theme.valine.enable == true
   #valine_box.nofancybox
@@ -103,13 +103,13 @@ if theme.minivaline.enable == true
   #minivaline_box.nofancybox
 
 if theme.waline.enable == true
-  #waline_box.nofancybox
+  #waline_box.nofancybox(class=[theme.waline.emojiSize || 'medium'])
 
 if theme.utterances.enable == true
   script(src='https://utteranc.es/client.js', repo=theme.utterances.repo, issue-term=theme.utterances.identifier, theme=theme.utterances.theme, crossorigin='anonymous', async)
 
 if theme.twikoo.enable == true
-  #twikoo_box
+  #twikoo_box.nofancybox
 
 if theme.artalk.enable == true
-  #artalk_box
+  #artalk_box.nofancybox
