@@ -1,6 +1,7 @@
 # Clarity
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/guozhenyi/hexo-theme-clarity/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/guozhenyi/hexo-theme-clarity/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/hexo-theme-clarity.svg)](https://www.npmjs.com/package/hexo-theme-clarity)
+
 
 [预览](https://www.guozhenyi.com)｜[English Document](./README-en.md)
 
