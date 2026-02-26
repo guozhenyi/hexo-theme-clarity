@@ -147,6 +147,7 @@ site_bg_img:
 # Post page settings
 post_meta:
   open_graph: true ## Whether to enable Open Graph.
+  post_date: created ## The date of the post, options: created/updated
 
 menu:
   - page: home
