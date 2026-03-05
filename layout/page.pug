@@ -4,9 +4,10 @@ block title
   title= page.title + ' | ' + config.title
 
 block content
-  .post
-    h1.post-title= page.title
-    .post-content
+  .page
+    - let title_style = {'text-align': page.title_align || undefined}
+    h1.page-title(style=title_style)= page.title
+    .page-content
       != page.content
   if page.donate
     include _widget/donate.pug

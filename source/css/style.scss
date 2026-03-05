@@ -8,6 +8,7 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 $primaryColor: #409eff;
 $codeBgColor: #e1e8e9; // 新的代码块背景色
 $hoverColor: #ff5722;
+$linkColor: #404244; // 链接颜色
 $linkHoverColor: #409eff; // 链接 Hover 颜色
 
 $originCodeBgColor: #f7f8f8; // 原来的代码块背景色
@@ -90,6 +91,12 @@ div {
 .mr-4 { margin-right: 4px; }
 .mr-10 { margin-right: 10px; }
 .ml-4 { margin-left: 4px; }
+
+.text-cut {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 #header {
     padding: 58px 0 0;
@@ -345,8 +352,106 @@ div {
     color: #888;
 }
 
+.page {
+    padding: 20px 0 15px;
+}
+.page-title {
+    margin-top: 0;
+    margin-bottom: 0.67em;
+    color: #555;
+    // text-align: left;
+    font-size: 1.8em;
+    line-height: 2;
+}
+.page-content {
+    clear: left;
+    line-height: 1.5;
+    // color: #444;
+    // padding-top: 15px;
+    // text-align: justify;
+    word-break: break-word;
+
+    h2 {
+        margin: 1.375em 0 1em;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+    }
+
+    h3 { margin: 1.375em 0 1em; }
+
+    a {
+        color: $primaryColor;
+        padding-bottom: 2px;
+        word-break: normal;
+    }
+
+    // a:hover,
+    // a:active {
+    //     text-decoration: underline;
+    // }
+
+    pre code { padding: 0 2em; }
+
+    p {
+        margin: 0 0 1.25em;
+        word-break: break-word;
+        overflow-wrap: break-word;
+
+        code {
+            padding: 3px 5px;
+            background-color: $codeBgColor;
+            font-family: Menlo, Consolas, monospace;
+        }
+    }
+
+    .caption {
+        color: #444;
+        display: block;
+        font-size: 0.9em;
+        margin-top: 0.1em;
+        position: relative;
+        text-align: center;
+    }
+
+    hr {
+        margin: 2.4em auto;
+        border: none;
+        border-top: 1px solid #eee;
+        position: relative;
+    }
+
+    img {
+        max-width: 100%;
+        margin: auto;
+        display: block;
+        box-sizing: border-box;
+        border: 4px solid #ccc;
+        border-radius: 1em;
+    }
+
+    img.border-none {
+        border: none;
+        border-radius: 0;
+    }
+
+    ul,
+    ol {
+        border-radius: 3px;
+        margin: 1em 0;
+
+        ul { margin: 0; }
+
+        code {
+            padding: 3px 5px;
+            background: $codeBgColor;
+            font-family: Menlo, Consolas, monospace;
+        }
+    }
+}
+
+
 .post {
-    padding: 25px 0 15px;
+    padding: 20px 0 15px;
 
     .post-title {
         margin: 0;
@@ -453,13 +558,13 @@ div {
         word-break: break-word;
 
         h2 {
-            margin: 1.4em 0 1.1em;
+            margin: 1.375em 0 1em;
             border-bottom: 1px solid #eee;
             overflow: hidden;
         }
 
         h3 {
-            margin: 1.4em 0 1.1em;
+            margin: 1.375em 0 1em;
         }
 
         a {
@@ -478,7 +583,7 @@ div {
         }
 
         p {
-            margin: 0 0 1.234em;
+            margin: 0 0 1.5em;
             word-break: break-word;
             overflow-wrap: break-word;
 
@@ -769,6 +874,10 @@ screen and (max-width: 48em) {
 
 @media print,
 screen and (max-width: 35.5em) {
+    html {
+        font-size: 14px;
+    }
+
     .body_container {
         padding: 0 20px;
     }
