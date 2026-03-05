@@ -1,0 +1,38 @@
+extends base
+
+block title
+  title= page.title + ' | ' + config.title
+
+block content
+  .page.flink-container
+    - let title_style = {'text-align': page.title_align || undefined}
+    h1.page-title(style=title_style)= page.title
+    .page-content
+      if site.data.flinks
+        each link in site.data.flinks
+          - let className = link.link_title ? markdown(`### ${link.link_title}`) : ""
+          - let classDesc = link.link_desc ? `<div class="flink-desc">${link.link_desc}</div>` : ""
+          - let listResult = ""
+          .flink
+            h3.flink-title= link.link_title
+            if link.link_desc
+              .flink-desc= link.link_desc
+            .flink-list
+              each item in link.link_list
+                .link-item
+                  a(href=item.link, title=item.name, target="_blank")
+                    img.link-item-avatar(src=item.avatar, alt=item.name)
+                    span.link-item-main
+                      span.link-item-title.text-cut= item.name
+                      span.link-item-desc(title=item.desc)= item.desc
+
+      != page.content
+
+  if page.donate
+    include _widget/donate.pug
+  if page.comments
+    include _partial/comments.pug
+
+block scripts
+  if page.comments
+    include _partial/comment_scripts.pug
