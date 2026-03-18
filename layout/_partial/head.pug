@@ -27,6 +27,16 @@ head
   link(rel="preload", href= cdn_url + "/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0", as="font", type="font/woff2", crossorigin="anonymous")
   link(rel='stylesheet', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
 
+  if theme.site.title_font == 'SmileySans'
+    style.
+      @font-face {
+          font-family: "SmileySans";
+          font-weight: 400;
+          src: url("/assets/webfont/SmileySans.woff2") format("woff2"), url("/assets/webfont/SmileySans.woff") format("woff");
+          font-variation-settings: normal;
+          font-display: swap;
+      }
+
   if theme.copycode == true
     link(rel='stylesheet', href=url_for(theme.css) + '/copycode.css' + '?v=' + theme.version)
   if theme.external_css == true

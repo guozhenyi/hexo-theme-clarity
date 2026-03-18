@@ -117,8 +117,10 @@ div {
 
         #logo {
             color: #555;
-            font-size: 38px;
+            font-size: 2.5rem;
             font-weight: bold;
+            font-family: "SmileySans", "WenQuanYi Micro Hei", sans-serif;
+            font-variation-settings: normal; // Chrome 140 以下版本需要
 
             span,
             &:hover {

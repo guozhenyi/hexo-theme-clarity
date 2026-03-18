@@ -145,6 +145,9 @@ cdn_providers: ## List of public CDN providers
 # Site background image link
 site_bg_img:
 
+site:
+  title_font: # website title webfont, Options: SmileySans
+
 # Post page settings
 post_meta:
   open_graph: true ## Whether to enable Open Graph.
