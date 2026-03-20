@@ -25,7 +25,6 @@ head
   link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
   link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
   link(rel="preload", href= cdn_url + "/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0", as="font", type="font/woff2", crossorigin="anonymous")
-  link(rel='stylesheet', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
 
   if theme.site.title_font == 'SmileySans'
     style.
@@ -60,6 +59,8 @@ head
     link(rel='stylesheet', href= cdn_url + '/@waline/client@3.13.0/dist/waline.css')
   if theme.artalk.enable == true
     link(rel='stylesheet', href= cdn_url + '/artalk@2.9.1/dist/Artalk.css')
+
+  link(rel='stylesheet', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
 
   script(src= cdn_url + '/jquery@3.7.1/dist/jquery.min.js')
 
