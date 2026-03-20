@@ -146,7 +146,8 @@ cdn_providers: ## List of public CDN providers
 site_bg_img:
 
 site:
-  title_font: # website title webfont, Options: SmileySans
+  start_year: ## The year your website was built, e.g. 2010.
+  title_font: ## website title webfont, Options: SmileySans
 
 # Post page settings
 post_meta:

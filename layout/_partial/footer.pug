@@ -1,6 +1,10 @@
 footer#footer
-  span.mr-10= '© ' + date(Date.now(), 'YYYY') + ' '
-    a(href=url_for('.'), rel='nofollow')= config.title
+  if theme.site.start_year
+    span.mr-10= '© '+ theme.site.start_year +' – ' + date(Date.now(), 'YYYY') + ' '
+      a(href=url_for('/'), rel='nofollow')= config.title
+  else
+    span.mr-10= '© ' + date(Date.now(), 'YYYY') + ' '
+      a(href=url_for('/'), rel='nofollow')= config.title
 
   if theme.show_forever
     span.mr-10
