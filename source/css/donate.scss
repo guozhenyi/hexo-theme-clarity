@@ -1,10 +1,9 @@
 #donate {
     position: relative;
-    font-family: "Helvetica Neue", Ubuntu, "WenQuanYi Micro Hei", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    height: 15em;
     line-height: 1.8em;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
-    height: 15em;
+    -webkit-font-smoothing: antialiased;
 }
 
 #donate img {
@@ -240,7 +239,7 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    -webkit-animation: showQR 3s ease-in-out 0s 1 normal forwards;
+    animation: showQR 3s ease-in-out 0s 1 normal forwards;
 }
 
 @keyframes showQR {
@@ -291,7 +290,7 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    -webkit-animation: hideQR 0.5s ease-in-out 0s 1 normal forwards;
+    animation: hideQR 0.5s ease-in-out 0s 1 normal forwards;
 }
 
 @keyframes hideQR {

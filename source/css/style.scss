@@ -14,15 +14,12 @@ $linkHoverColor: #409eff; // 链接 Hover 颜色
 $originCodeBgColor: #f7f8f8; // 原来的代码块背景色
 $originLinkColor: #01579f; // 原来的链接颜色
 
-html,
-button,
-input,
-select,
-textarea,
-.MJXc-TeX-unknown-R,
-.pure-g [class *="pure-u"] {
-    /* Set your content font stack here: */
-    font-family: "PingFangSC-Regular", Helvetica, "Helvetica Neue", "Segoe UI", "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", sans-serif !important;
+html {
+    font-family: Lato, 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+}
+
+code {
+    font-family: 'Source Code Pro', Menlo, Consolas, 'Source Han Mono', 'Microsoft YaHei Mono', monospace;
 }
 
 body {
@@ -119,7 +116,7 @@ div {
             color: #555;
             font-size: 2.5rem;
             font-weight: bold;
-            font-family: "SmileySans", "WenQuanYi Micro Hei", sans-serif;
+            font-family: "SmileySans", sans-serif;
             font-variation-settings: normal; // Chrome 140 以下版本需要
 
             span,
@@ -402,7 +399,6 @@ div {
         code {
             padding: 3px 5px;
             background-color: $codeBgColor;
-            font-family: Menlo, Consolas, monospace;
         }
     }
 
@@ -446,7 +442,6 @@ div {
         code {
             padding: 3px 5px;
             background: $codeBgColor;
-            font-family: Menlo, Consolas, monospace;
         }
     }
 }
@@ -595,7 +590,6 @@ div {
                 // margin: 0 5px;
                 padding: 3px 5px;
                 background-color: $codeBgColor;
-                font-family: Menlo, Consolas, monospace;
             }
         }
 
@@ -647,7 +641,6 @@ div {
                 // margin: 0 5px;
                 padding: 3px 5px;
                 background: $codeBgColor;
-                font-family: Menlo, Consolas, monospace;
             }
         }
 
@@ -701,29 +694,29 @@ div {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
     .copyright-label {
-      display: inline-block;
-      width: 5.2em;
-      color: #b5b5b5;
-      font-weight: bold;
+        display: inline-block;
+        width: 5.2em;
+        color: #b5b5b5;
+        font-weight: bold;
     }
 
     a {
-      color: #808080;
+        color: #808080;
 
-      &:hover {
-        color: $linkHoverColor;
-        text-decoration: underline;
-      }
+        &:hover {
+            color: $linkHoverColor;
+            text-decoration: underline;
+        }
     }
 
     .copy-icon {
-      margin-left: 1em;
-      width: 1em;
+        margin-left: 1em;
+        width: 1em;
 
-      &:hover {
-        color: $linkHoverColor;
-        cursor: pointer;
-      }
+        &:hover {
+            color: $linkHoverColor;
+            cursor: pointer;
+        }
     }
 }
 
@@ -1153,7 +1146,6 @@ screen and (min-width: 48em) {
 }
 
 #process span.number {
-    font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 0;
@@ -1184,7 +1176,6 @@ screen and (min-width: 48em) {
 }
 
 .timeline-label p {
-    font-family: Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     margin-bottom: 3px
 }
 
@@ -1295,7 +1286,6 @@ screen and (min-width: 48em) {
 #process .present,
 #process .born {
     font-size: 14px;
-    font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     font-style: italic;
     color: #333;
     padding: 10px;
@@ -1437,7 +1427,6 @@ figure.highlight,
     .code,
     .tag {
         background-color: inherit;
-        font-family: Menlo, Consolas, monospace;
         border: none;
         padding: 0;
         margin: 0;
@@ -1504,7 +1493,6 @@ figure.highlight,
 
     .line,
     .line-number {
-        font-family: Menlo, Consolas, monospace;
         margin: 0 0 5px 0;
         user-select: none;
     }
