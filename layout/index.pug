@@ -20,6 +20,10 @@ block content
           i.fa.fa-calendar.mr-4
           span.post-meta-label= '发表于'
           time.post-meta-published= post.date.format(config.date_format)
+        if theme.waline.enable == true
+          a.ds-thread-count(href=url_for(post.path) + '#waline_box')
+            span.waline-comment-count(data-path=url_for(post.path)) 0
+            span= ' ' + __('Comment')
         if theme.disqus.enable == true
           a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
         if theme.changyan
@@ -42,6 +46,20 @@ block content
           a(href=url_for(post.path))= __('Readmore')
 
   include _partial/paginator.pug
+
+  - var providers = theme.cdn_providers
+  - var cdn_url = ''
+  if theme.cdn_type == 'custom'
+    - cdn_url = theme.cdn_custom_url
+  else if theme.cdn_type in providers
+    - cdn_url = providers[theme.cdn_type]
+
+  if theme.waline.enable == true
+    script(type='module').
+      import { commentCount } from '#{cdn_url}/@waline/client@3.13.0/dist/comment.js';
+      commentCount({
+        serverURL: '#{theme.waline.serverURL}',
+      });
 
   if theme.disqus.enable == true
     script#dsq-count-scr(src='//'+ theme.disqus.shortname + '.disqus.com/count.js', async)
