@@ -1,4 +1,5 @@
 include _partial/helpers.pug
+include _partial/util.pug
 
 if page.title
   - var current_title = page.title
@@ -21,7 +22,7 @@ html(lang=config.language)
       header#header
         .site-name
           h1.hidden= current_title
-          a#logo(href=url_for('.'))= config.title
+          a#logo(href=url_for('/'))= config.title
           p.description= config.subtitle
         nav#nav-menu
           - for (var i in theme.menu)

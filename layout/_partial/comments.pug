@@ -1,12 +1,5 @@
-- var providers = theme.cdn_providers
-- var cdn_url = ''
-if theme.cdn_type == 'custom'
-  - cdn_url = theme.cdn_custom_url
-else if theme.cdn_type in providers
-  - cdn_url = providers[theme.cdn_type]
-
 if theme.disqus.enable == true
-  script(src= cdn_url + '/disqusjs@1.3.0/dist/disqus.js')
+  script(src= getCdnUrl('/disqusjs@1.3.0/dist/disqus.js'))
   script(id='disqus-count-script').
     $(function() {
       var xhr = new XMLHttpRequest();

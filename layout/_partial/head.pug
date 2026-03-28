@@ -1,10 +1,3 @@
-- var providers = theme.cdn_providers
-- var cdn_url = ''
-if theme.cdn_type == 'custom'
-  - cdn_url = theme.cdn_custom_url
-else if theme.cdn_type in providers
-  - cdn_url = providers[theme.cdn_type]
-
 head
   meta(charset='utf-8')
   meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -24,7 +17,7 @@ head
   link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
   link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
   link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
-  link(rel="preload", href= cdn_url + "/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href= getCdnUrl('/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0'), as="font", type="font/woff2", crossorigin="anonymous")
 
   if theme.site.title_font == 'SmileySans'
     style.
@@ -43,26 +36,26 @@ head
   if theme.self_search == true
     link(rel='stylesheet', href=url_for(theme.css)+'/search.css' + '?v=' + theme.version)
 
-  //- link(rel='stylesheet', href= cdn_url + '/normalize.css@8.0.1/normalize.css')
-  link(rel='stylesheet', href= cdn_url + '/purecss@3.0.0/build/pure-min.css')
-  link(rel='stylesheet', href= cdn_url + '/purecss@3.0.0/build/grids-responsive-min.css')
-  link(rel='stylesheet', href= cdn_url + '/font-awesome@4.7.0/css/font-awesome.min.css')
-  link(rel='stylesheet', href= cdn_url + '/@docsearch/css@3.9.0/dist/style.css')
+  //- link(rel='stylesheet', href= getCdnUrl('/normalize.css@8.0.1/normalize.css'))
+  link(rel='stylesheet', href= getCdnUrl('/purecss@3.0.0/build/pure-min.css'))
+  link(rel='stylesheet', href= getCdnUrl('/purecss@3.0.0/build/grids-responsive-min.css'))
+  link(rel='stylesheet', href= getCdnUrl('/font-awesome@4.7.0/css/font-awesome.min.css'))
+  link(rel='stylesheet', href= getCdnUrl('/@docsearch/css@3.9.0/dist/style.css'))
 
   if theme.fancybox == true
-    link(rel='stylesheet', href= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+    link(rel='stylesheet', href= getCdnUrl('/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css'))
   if theme.disqus.enable == true
-    link(rel='stylesheet', href= cdn_url + '/disqusjs@1.3.0/dist/disqusjs.css')
+    link(rel='stylesheet', href= getCdnUrl('/disqusjs@1.3.0/dist/disqusjs.css'))
   if theme.gitalk.enable == true
-    link(rel='stylesheet', href= cdn_url + '/gitalk@1.8.0/dist/gitalk.css')
+    link(rel='stylesheet', href= getCdnUrl('/gitalk@1.8.0/dist/gitalk.css'))
   if theme.waline.enable == true
-    link(rel='stylesheet', href= cdn_url + '/@waline/client@3.13.0/dist/waline.css')
+    link(rel='stylesheet', href= getCdnUrl('/@waline/client@3.13.0/dist/waline.css'))
   if theme.artalk.enable == true
-    link(rel='stylesheet', href= cdn_url + '/artalk@2.9.1/dist/Artalk.css')
+    link(rel='stylesheet', href= getCdnUrl('/artalk@2.9.1/dist/Artalk.css'))
 
   link(rel='stylesheet', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
 
-  script(src= cdn_url + '/jquery@3.7.1/dist/jquery.min.js')
+  script(src= getCdnUrl('/jquery@3.7.1/dist/jquery.min.js'))
 
   if config.feed
     link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
@@ -94,10 +87,9 @@ head
       })(window, document, "clarity", "script", "#{theme.microsoft_clarity}");
 
   if !(theme.copycode == false && (theme.donate.enable == false && page.donate != true) && theme.post_copyright.enable == false)
-    link(rel='stylesheet', href= cdn_url + '/toastr@2.1.4/build/toastr.min.css')
-    script(src= cdn_url + '/clipboard@2.0.11/dist/clipboard.min.js')
-    script(src= cdn_url + '/toastr@2.1.4/build/toastr.min.js')
+    link(rel='stylesheet', href= getCdnUrl('/toastr@2.1.4/build/toastr.min.css'))
+    script(src= getCdnUrl('/clipboard@2.0.11/dist/clipboard.min.js'))
+    script(src= getCdnUrl('/toastr@2.1.4/build/toastr.min.js'))
 
   if theme.dark == true
     include darkmode.pug
-

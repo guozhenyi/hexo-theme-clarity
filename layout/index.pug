@@ -47,20 +47,6 @@ block content
 
   include _partial/paginator.pug
 
-  - var providers = theme.cdn_providers
-  - var cdn_url = ''
-  if theme.cdn_type == 'custom'
-    - cdn_url = theme.cdn_custom_url
-  else if theme.cdn_type in providers
-    - cdn_url = providers[theme.cdn_type]
-
-  if theme.waline.enable == true
-    script(type='module').
-      import { commentCount } from '#{cdn_url}/@waline/client@3.13.0/dist/comment.js';
-      commentCount({
-        serverURL: '#{theme.waline.serverURL}',
-      });
-
   if theme.disqus.enable == true
     script#dsq-count-scr(src='//'+ theme.disqus.shortname + '.disqus.com/count.js', async)
   if theme.changyan
@@ -69,3 +55,11 @@ block content
     include _partial/mathjax.pug
   if config.mathjax2
     include _partial/mathjax2.pug
+
+block scripts
+  if theme.waline.enable == true
+    script(type='module' async).
+      import { commentCount } from '#{getCdnUrl("/@waline/client@3.13.0/dist/comment.js")}';
+      commentCount({
+        serverURL: '#{theme.waline.serverURL}',
+      });

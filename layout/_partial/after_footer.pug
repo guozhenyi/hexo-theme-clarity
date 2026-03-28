@@ -1,12 +1,5 @@
-- var providers = theme.cdn_providers
-- var cdn_url = ''
-if theme.cdn_type == 'custom'
-  - cdn_url = theme.cdn_custom_url
-else if theme.cdn_type in providers
-  - cdn_url = providers[theme.cdn_type]
-
 if theme.fancybox == true
-  script(src= cdn_url + '/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', async)
+  script(src= getCdnUrl('/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js'), async)
   script(src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
 
 if theme.swiftype
@@ -32,7 +25,7 @@ if theme.canvas_nest.enable == true
   - var opacity=theme.canvas_nest.opacity || "0.5"
   - var zIndex=theme.canvas_nest.zIndex || "-2"
   - var count=theme.canvas_nest.count || "50"
-  script(color=color, opacity=opacity, zIndex=zIndex, count=count, src= cdn_url + '/canvas-nest.js@2.0.4/dist/canvas-nest.js')
+  script(color=color, opacity=opacity, zIndex=zIndex, count=count, src= getCdnUrl('/canvas-nest.js@2.0.4/dist/canvas-nest.js'))
 
 if theme.love == true
   script(src=url_for(theme.js) + '/love.js' + '?v=' + theme.version)
@@ -53,7 +46,7 @@ script(src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
 script(src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
 
 if theme.algolia.enable == true
-  script(src= cdn_url + '/@docsearch/js@3.9.0/dist/umd/index.js')
+  script(src= getCdnUrl('/@docsearch/js@3.9.0/dist/umd/index.js'))
   script.
     docsearch({
       appId: "#{theme.algolia.app_id}",

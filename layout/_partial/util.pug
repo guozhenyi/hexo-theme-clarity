@@ -1,0 +1,14 @@
+//- 多行代码块（- 开头，缩进包裹）
+-
+  var providers = theme.cdn_providers || {};
+  var cdn_base_url = '';
+
+  if (theme.cdn_type === 'custom') {
+    cdn_base_url = theme.cdn_custom_url || '';
+  } else if (providers.hasOwnProperty(theme.cdn_type)) {
+    cdn_base_url = providers[theme.cdn_type];
+  }
+
+  function getCdnUrl(path) {
+    return String(cdn_base_url).replace(/\/+$/, '') + '/' + String(path).replace(/^\/+/, '');
+  }
