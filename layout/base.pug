@@ -28,8 +28,12 @@ html(lang=config.language)
           p.description= config.subtitle
           div#docsearch
         nav#nav-menu
-          - for (var i in theme.menu)
-            +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+          - for (var item of theme.menu)
+            if item.directory == 'external'
+              a(href=item.page, title=item.name, target="_blank", rel="noopener")
+                i(class='fa' + ' ' + item.icon)= ' ' + item.name
+            else
+              +a_with_current(item.directory, __(item.page), item.icon)
 
       main#layout.pure-g
         .pure-u-1.pure-u-md-3-4: .content_container
